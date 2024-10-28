@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>html basic</title>
+    <style>
+        pre {
+            background-color: #f4f4f4; /* Color de fondo del recuadro */
+            padding: 10px;            /* Espaciado dentro del recuadro */
+            border: 1px solid #ddd;   /* Borde del recuadro */
+            border-radius: 5px;       /* Bordes redondeados */
+            overflow-x: auto;         /* Permitir desplazamiento horizontal */
+            max-width: 100%;          /* Limitar ancho máximo */
+        }
+        code {
+            font-family: Consolas, monospace; /* Fuente de texto para código */
+            color: #333;                      /* Color del texto */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Elementos</h1>
+
+<ul>
+    <li>    
+        <strong>
+            enlaces
+        </strong>
+        <pre><code>&lt;a href="http://www.google.com"&gt;Google&lt;/a&gt;</code></pre>
+    </li>
+    <li>
+        <strong>
+            formularios
+        </strong>
+            elementos del formulario
+            inputs, select, textarea
+    </li>
+    <li>
+        <strong>
+            listas
+        </strong>
+        <ul>
+            <li>listas ordenadas</li>
+            <li>listas desordenadas</li>
+        </ul>
+    </li>
+</ul>
+    <h1>
+        Identificadores
+    </h1>
+    <ol>
+        <li>
+            id <br>
+            <pre><code>&lt;div id="miDiv"&gt;&lt;/div&gt;</code></pre>
+        </li>
+        <li>
+            class <br>
+            <pre><code>&lt;div class="miClase"&gt;&lt;/div&gt;</code></pre>
+        </li>
+        <li>
+            name <br>
+            <pre><code>&lt;input name="miInput"&gt;&lt;/input&gt;</code></pre>
+        </li>
+        <li>
+            en bbdd se usa el id en los campos <br>
+            <pre><code>CREATE TABLE usuarios (id INT PRIMARY KEY, nombre VARCHAR(50), email VARCHAR(50))</code></pre>
+        </li>
+
+    </ol>
+        <h1>
+            Enlaces
+        </h1>
+        usamos la etiqueta a <br>
+        
+        <pre><code>&lt;a href="http://www.google.com"&gt;Google&lt;/a&gt;</code></pre>
+        <h1>
+            Formularios
+        </h1>
+        usamos la etiqueta form 
+        <br>
+        el method puede ser get o post, se usa post para enviar datos sensibles
+        <br>
+        y el action es la url a la que se envian los datos
+        <pre><code>&lt;form action="procesar.php" method="post"&gt;&lt;/form&gt;</code></pre>
+        <h1>
+            Inputs
+        </h1>
+        sirven para introducir datos
+        <pre><code>&lt;input type="text" name="nombre" id="nombre"&gt;&lt;/input&gt;</code></pre>
+        Label es el texto que aparece al lado del input y el for es el id del input
+        <pre><code>&lt;label for="nombre"&gt;Nombre&lt;/label&gt;</code></pre>            
+</body>
+</html>
