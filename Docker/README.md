@@ -7,4 +7,4 @@ El comando `docker ps -a` se utiliza para listar todos los contenedores de Docke
 
 En resumen, el comando `docker ps -a` proporciona una lista completa de todos los contenedores de Docker, permitiendo ver tanto los contenedores activos como los inactivos.
 
-docker ps -a 
+- `docker images ps -a` Este comando se utiliza para listar todas las imágenes de Docker en el sistema, incluyendo las imágenes intermedias que no están etiquetadas. 
