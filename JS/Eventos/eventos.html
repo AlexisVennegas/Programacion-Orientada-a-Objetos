@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // funcion para mostrar un mensaje
+        function miFuncion(mensaje){
+            alert(mensaje);
+            console.log(mensaje);
+            let nombre= "pepe";
+            console.log("le he puesto a una traza a " + nombre);
+            
+        }
+        function pigit(str){
+            let array = str.split(" ");
+            for(let i=0; i<array.length; i++){
+                // eliminamos la primer letra de cada palabra y se la añadimos al final
+                array[i] = array[i].slice(1) + array[i].charAt(0);
+
+                // añidos la palabra "ay " al final de cada palabra
+                array[i] = array[i] + "ay "
+            }
+            return(array.join(" "));
+        }   
+        //'igay  atinay  say  oolay '
+        console.log(
+        pigit("Pig latin is cool!"))
+         </script>
+</head>
+<body>
+    <form id="fdatospersonales" name="fdatospersonales" action="#" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre"  name="nombre" onclick="miFuncion('has pulsado el nombre')">
+        <br>
+        <label for="fnacimiento">Nacimiento</label>
+        <input type="date" id="fnacimiento"  name="fnacimiento">
+        <br>
+        <label for="fcolor">color</label>
+        <input type="color" name="fcolor" id="fcolor">
+        <br></b>
+        <label for="fcurso">Curso</label>
+        <select name="fcurso" id="fcurso">
+            <option value="1">POO</option>
+            <option value="2">BBDD</option>
+            <option value="3">AWS</option>
+        </select>
+        <button type="submit">enviar</button>
+    </form>
+</body>
+</html>
