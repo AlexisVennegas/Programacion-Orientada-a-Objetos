@@ -21,6 +21,4 @@ En resumen, el comando `docker ps -a` proporciona una lista completa de todos lo
 
 - `docker exec -it [idContenedor] [comando]`: Este comando se utiliza para ejecutar un comando dentro de un contenedor en ejecución. La opción `-it` permite la interacción con el contenedor a través de una terminal.
 
-Estos comandos te ayudarán a gestionar tus contenedores e imágenes de Docker de manera más eficiente.
-
-
+- `docker attach [idContenedor]`: Este comando se utiliza para volver a conectar tu terminal a un contenedor en ejecución. Debes proporcionar el ID o nombre del contenedor al que deseas adjuntar.
