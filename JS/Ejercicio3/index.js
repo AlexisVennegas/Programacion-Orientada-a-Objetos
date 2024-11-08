@@ -1,6 +1,10 @@
-function mostrarNombre(){
-    // para que no recargue la pagina
-    let nombre = document.getElementById("input").value;
-    let text =  document.getElementById("nombre");
-    text.innerHTML = nombre.toUpperCase()
+
+function toUpperCasePropioElemento(elemento) {
+    console.log(elemento)
+    elemento.value = elemento.value.toUpperCase();
 }
+
+
+
+let elemento = document.getElementById("texto");
+elemento.addEventListener("keyup", (event) => toUpperCasePropioElemento(event.target)); 
