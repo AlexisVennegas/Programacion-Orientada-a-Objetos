@@ -1,0 +1,31 @@
+<table id="miTabla" border="1">
+    <tr>
+    <td>Producto A</td>
+    <td>10</td>
+    </tr>
+    <tr>
+    <td>Producto B</td>
+    <td>20</td>
+    </tr>
+    <tr>
+    <td>Producto C</td>
+    <td>15</td>
+    </tr>
+   </table>
+   <button onclick="calcularTotal()">Calcular Total</button>
+   <div id="resultado"></div>
+   <script>
+    function calcularTotal() {
+        const td = document.querySelectorAll('td');
+        let total = 0;
+        console.log(td)
+        for(let i = 0; i < td.length; i++){
+            console.log(td[i].innerText)
+            if(i % 2 != 0){
+                total += parseInt(td[i].innerText);
+            }
+        }
+        resultado.innerHTML = `<p>El total es: ${total}</p>`;
+    }
+   </script>
+   

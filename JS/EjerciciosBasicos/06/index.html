@@ -1,0 +1,23 @@
+<body>
+	<table id="miTabla" border="1">
+ 		<tr>
+  		<td>Celda 1</td>
+   		<td>Celda 2</td>
+    	</tr>
+     	<tr>
+      	<td>Celda 3</td>
+       	<td>Celda 4</td>
+        </tr>
+   </table>
+<button onclick="contarFilas()">Contar Filas</button>
+
+</body>
+
+<script>
+		function contarFilas() {
+			console.log("numero de celdas: " + document.getElementsByTagName("td").length, 
+			 "numero de Filas: " + document.getElementsByTagName("tr").length)
+			
+		}
+
+</script>

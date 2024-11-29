@@ -1,0 +1,26 @@
+<body>
+    
+    <form onsubmit="crearTabla(event, event.srcElement.filas.value, event.srcElement.columnas.value)">
+        Filas: <input type="number" id="filas" />
+        Columnas: <input type="number" id="columnas" />
+        <button type="submit">Crear Tabla</button>
+       </form>
+       <div id="contenedorTabla"></div>
+       <script>
+        function crearTabla(e, fil, col){
+            console.log(fil, col)
+            contenedorTabla.innerHTML = "<table border='1' id='newTable'>"
+              e.preventDefault(); 
+
+                if((fil || col) || (fill > 0 && col > 0)){
+                    for(let i = 0; i < fil; i++){
+                        let generate = newTable.insertRow()
+                        for(let j = 0; j < col; j++){
+                            generate.insertCell(j).innerHTML = "F" + i + "C" + j
+                        }
+                    }
+                }
+            }
+       </script>
+       
+</body>

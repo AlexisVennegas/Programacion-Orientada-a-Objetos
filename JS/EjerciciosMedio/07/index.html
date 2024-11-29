@@ -1,0 +1,26 @@
+<body>
+    
+    <table id="miTabla" border="1">
+        <tr>
+        <td>Celda 1</td>
+        <td>Celda 2</td>
+        </tr>
+        <tr>
+        <td>Celda 3</td>
+        <td>Celda 4</td>
+        </tr>
+       </table>
+       <script>
+            const td = document.querySelectorAll("td");
+           td.forEach((e) => {
+                e.addEventListener("mouseover", () => {
+                  e.style.backgroundColor = "red";
+                })
+                e.addEventListener("mouseout", () => {
+                  e.style.backgroundColor = "white";
+                })
+
+        })
+       </script>
+       
+</body>

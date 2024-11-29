@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="index.css">
+<body>
+    <form action="#" onsubmit="return validarFormulario()"> 
+      <input type="text" id="nombre" placeholder="Nombre"> 
+      <input type="text" id="correo" placeholder="Correo"> 
+      <button type="submit">Enviar</button> 
+      </form> 
+      <div id="errores">   
+      </div> 
+  <script> 
+    
+    function validarFormulario(){
+      let hayErrores=false;
+      let divErrores = document.getElementById("errores");
+      let nombre = document.getElementById("nombre").value;
+      console.log("nombre:"+nombre);
+      if(nombre==""){
+        mostrarMensajeError("#nombre","El Nombre debe ser completado.")
+        hayErrores=true;
+      }
+      let email = document.querySelector("#correo").value;
+      console.log("correo:"+email);
+      if(email==""){
+        mostrarMensajeError("#correo","El Correo debe ser completado.")
+        hayErrores=true;
+      }
+      if(!email.includes("@")){
+        mostrarMensajeError("#correo","El Correo debe ser válido.")
+        hayErrores=true;
+      }
+      console.log("Se ha validado el formulario.");
+      return !hayErrores;
+    }
+    function mostrarMensajeError(id,mensaje){    
+        //divErrores.innerHTML=divErrores.innerHTML+"<p>"+mensaje+"</p>";
+        errores.innerHTML+="<p>"+mensaje+"</p>";
+        document.querySelector(id).focus();
+    }
+    
+  
+  </script>
+</body>

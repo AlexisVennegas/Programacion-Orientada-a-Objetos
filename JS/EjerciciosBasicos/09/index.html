@@ -1,0 +1,21 @@
+<body>
+<table id="miTabla" border="1">
+	 <tr>
+  	 <td>Celda 1</td>
+   	 <td>Celda 2</td>
+     </tr>
+     <tr>
+     <td>Celda 3</td>
+     <td>Celda 4</td>
+     </tr>
+</table>
+<button onclick="eliminarUltimaFila()">Eliminar Última Fila</button>
+<button onclick="location.reload();">recargar pagina</button>
+<script>
+
+
+	function eliminarUltimaFila(){
+		document.getElementsByTagName("tr")[1].remove()
+		
+	}
+</script>        

@@ -1,0 +1,20 @@
+<body>
+
+<table id="miTabla" border="1">
+	<tr>
+  		<td>Celda 1</td>
+  		<td>Celda 2</td>
+  		<button onclick="cambiarCelda()">cambia celda</button>
+    </tr>
+</table>
+
+
+</body>
+<script>
+	function cambiarCelda(){
+		
+		let table = document.querySelector("#miTabla")
+		table.getElementsByTagName("td")[0].innerHTML = "HOLA"
+
+	}
+</script>

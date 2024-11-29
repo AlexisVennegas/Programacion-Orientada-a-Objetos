@@ -1,0 +1,22 @@
+<input type="text" id="filtro" placeholder="Buscar..." oninput="filtrarTabla(this)" />
+<table id="miTabla" border="1">
+ <tr><td>Manzana</td></tr>
+ <tr><td>Banana</td></tr>
+ <tr><td>Naranja</td></tr>
+</table>
+
+<script>
+    function filtrarTabla(input){
+    	const valueInput  = input.value
+    	const td = document.querySelectorAll("td");
+    	td.forEach((element) => {
+    		console.log(element.textContent)
+    		if (element.textContent.includes(valueInput)) {
+    			element.parentElement.style.display = "block"
+    		}
+            else {
+                element.parentElement.style.display = "none"
+            }
+    	})
+    }
+</script>

@@ -1,0 +1,16 @@
+<input type="text" id="email" placeholder="Escribe tu correo" />
+
+<button onclick="validarCorreo()">Validar</button>
+<div id="resultado"></div>
+<script>
+    function validarCorreo(){
+        console.log(email.value)
+        if(email.value == "" || !email.value.includes("@")){
+            resultado.innerHTML = "Correo no valido";
+        }
+        else{
+            resultado.innerHTML = "Correo valido";
+        }
+
+    }
+</script>

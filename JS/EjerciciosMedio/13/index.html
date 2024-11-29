@@ -1,0 +1,60 @@
+<table id="miTabla" border="1">
+    <thead>
+    <tr>
+    <th onclick="ordenarTabla(0)">Nombre</th>
+    <th onclick="ordenarTabla(1)">Edad</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>Juan</td>
+    <td>25</td>
+    </tr>
+    <tr>
+    <td>Ana</td>
+    <td>30</td>
+    </tr>
+    <tr>
+    <td>María</td>
+    <td>22</td>
+    </tr>
+    </tbody>
+   </table>
+   <script>
+    function ordenarTabla(option){
+
+        if(option == 1){
+            const td = document.querySelectorAll('td');
+            let array = [];
+            for(let i = 0; i < td.length; i++){
+                if(i % 2 != 0){
+                    array.push(td[i].innerText);
+                }
+            }
+            array.sort((a, b) => a - b);
+            td.forEach((element, index) => {
+                if(index % 2 != 0){
+                    element.innerText = array.shift();
+                }
+            });
+        }
+        else if(option == 0){
+            const td = document.querySelectorAll('td');
+            let array = [];
+            for(let i = 0; i < td.length; i++){
+                if(i % 2 == 0){
+                    array.push(td[i].innerText);
+                }
+            }
+            array.sort();
+            td.forEach((element, index) => {
+                if(index % 2 == 0){
+                    element.innerText = array.shift();
+                }
+            });
+        
+        }
+    }
+ 
+   </script>
+   

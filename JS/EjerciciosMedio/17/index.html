@@ -1,0 +1,53 @@
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form action="#" onsubmit="return validarFormulario(event)">
+        <input type="text" id="nombre" placeholder="Nombre" />
+        <input type="text" id="correo" placeholder="Correo" />
+        <button type="submit">Enviar</button>
+    </form>
+       <div id="errores"></div>
+    <script>
+
+        function sendMessage(message, boolean){
+            // alert(message);
+            errores.innerHTML = `<p>${message}</p>`;
+            return boolean;
+        }
+    
+        function validarFormulario(e) {
+            e.preventDefault();
+            let nombre = document.getElementById('nombre');
+            let correo = document.getElementById('correo');
+            let errores = document.getElementById('errores');
+
+            let mensajes = []
+
+            if (nombre.value.length < 0 || nombre.value == "") {
+                nombre.focus();
+                mensajes.push('El nombre no puede estar vacio');
+                // sendMessage('El nombre no puede estar vacio', false, nombre);
+            }
+            if (correo.value.length < 0 || correo.value == "") {
+                correo.focus();
+                mensajes.push('El correo no puede estar vacio');
+                // sendMessage('El correo no puede estar vacio', false);
+            }
+            if(!correo.value.includes('@')){
+                // sendMessage('El correo debe contener un @', false);
+                mensajes.push('El correo debe contener un @');
+            }
+
+            if (mensajes.length > 0) {
+                mensajes.forEach((mensaje) => {
+                    errores.innerHTML += `<p>${mensaje}</p>`;
+                });
+                return false;
+            }
+            else{
+                sendMessage('Formulario enviado', true);
+            }
+        }
+    </script>
+</body>

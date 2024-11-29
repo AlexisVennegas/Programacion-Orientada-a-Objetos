@@ -1,0 +1,21 @@
+<body>
+
+	<table id="miTabla" border="1">
+ 		<tr>
+  		<td>Celda 1</td>
+   		<td>Celda 2</td>
+    	</tr>
+    </table>
+
+    <button onclick="mostrarCelda()">Mostrar Celda</button>
+
+</body>
+<script>
+	function mostrarCelda(){
+		let table = document.querySelector("#miTabla")
+		alert(document.getElementsByTagName("td")[0].textContent + " " + document.getElementsByTagName("td")[1].textContent)	
+	}
+
+</script>
+
+    

@@ -1,0 +1,18 @@
+<body>
+	<form>
+ 		<input type="text" id="email" placeholder="Escribe tu email" />
+  		<button type="button" onclick="validarEmail()">Validar</button>
+  	</form>
+
+</body>
+
+
+<script>
+	function validarEmail(){
+		let inputValue = document.querySelector("#email").value
+		console.log(inputValue)
+		if(inputValue.length == 0 || inputValue == "" || inputValue == " ") alert("este campo esta vacio")
+		else return;
+	}
+
+</script>

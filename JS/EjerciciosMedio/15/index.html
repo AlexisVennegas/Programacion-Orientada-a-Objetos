@@ -1,0 +1,23 @@
+<input type="text" id="busqueda" placeholder="Buscar..."
+oninput="resaltarPalabras(this)" />
+<p id="texto">El sol brilla en el cielo azul mientras los pájaros
+cantan.</p>
+<script>
+    function resaltarPalabras(input){
+        const texto = document.getElementById("texto")
+        
+        const words = input.value.split(" ");   
+        const text = texto.textContent.split(" ");
+ 
+        texto.innerHTML = "";
+        text.forEach((element) => {
+            if (words.includes(element)) {
+                texto.innerHTML += `<span style="background-color: yellow">${element}</span> `
+            }
+            else {
+                texto.innerHTML += `${element} `
+            }
+        })
+
+}
+</script>

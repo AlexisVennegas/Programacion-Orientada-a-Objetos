@@ -1,0 +1,11 @@
+<input type="text" id="nuevoElemento" placeholder="Nuevo elemento" />
+<button onclick="agregarElemento()">Agregar</button>
+<ul id="miLista"></ul>
+<script>
+ function agregarElemento(){
+    const inpuTextValue = document.getElementById('nuevoElemento').value;
+    const ul = document.getElementById('miLista');
+    ul.innerHTML += `<li>${inpuTextValue}</li>`;    
+
+    }
+</script>

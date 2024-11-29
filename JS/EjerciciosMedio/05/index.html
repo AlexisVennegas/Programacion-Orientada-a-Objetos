@@ -1,0 +1,14 @@
+<body>
+    <input type="checkbox" id="deshabilitar" onchange="controlarCampos(this, document.getElementById('miFormulario'))"
+    /> Deshabilitar
+    <form id="miFormulario">
+     <input type="text" placeholder="Campo 1" />
+     <input type="text" placeholder="Campo 2" />
+</body>
+</form>
+<script>
+    function controlarCampos(checkBox, formulario) {
+        checkBox.checked == true ? (formulario[0].disabled = true, formulario[1].disabled = true) : 
+                                   (formulario[0].disabled = false, formulario[1].disabled = false) 
+    }
+</script>
