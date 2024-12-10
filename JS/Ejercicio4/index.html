@@ -1,0 +1,79 @@
+<body>
+    <form>
+        <!-- numero de unidades producidas por dia  -->
+        <label for="unidadess">Numero de unidades producidas por dia</label>
+        <input type="number" name="unidadess" id="unidades" min="0">    
+        <p id="errorUnidades">Error, verifica el numero de unidades</p>
+
+
+        <!-- cantidad de dias -->
+        <label for="diass">Cantidad de dias</label>
+        <input type="number" name="diass" id="dias" min="0">
+        <p id="errorDias">Error: verifica el numero de dias</p>
+
+        <!-- valor de la unidad -->
+        <label for="rangevalue"id="rangevalue">Valor de la unidad: 0 €</label>
+        <input type="range" name="rangevalue" id="precio" min="0" max="200" value="0">
+        <p id="errorPrecio">Error: verifica el monto correctamente</p>
+
+        <!-- boton para calcular -->    
+        <input type="button" onclick="calcular(event)" value="Mostrar produccion economica total">
+    </form>
+    <p id="resultado">resultado: </p>
+</body>
+<script>
+      precio.addEventListener('input', () => {
+        rangevalue.innerText ="Valor de la unidad: " + precio.value + " €";
+    });
+    function checkError(dias, unidades, precio){
+        if(dias == "" || isNaN(dias)) {
+            let errorDias = document.getElementById("errorDias")
+            errorDias.style = "visibility: visible"
+        }
+        if(unidades == "" || isNaN(unidades)){
+            let errorUnidades = document.getElementById("errorUnidades")
+            errorUnidades.style = "visibility: visible"
+        }
+        if(precio == 0 || isNaN(precio)){
+            let errorPrecio = document.getElementById("errorPrecio")
+            errorPrecio.style = "visibility: visible"
+        }
+        if((precio != "" && dias != "" && unidades != "")){
+            let errorPrecio = document.getElementById("errorPrecio")
+            errorPrecio.style = "visibility: hidden"
+            errorUnidades.style = "visibility: hidden"
+            errorDias.style = "visibility: hidden"
+            return(true)
+        }
+    }
+  
+
+    function calcular(){
+        // let unidades = document.getElementById("unidades")
+        // let dias = document.getElementById("dias")
+        // let precio = document.getElementById("precio")
+
+        if(!checkError(unidades.value, dias.value, precio.value)) return
+        resultado.textContent = "resultado: " +  unidades.value * dias.value * precio.value + " euros"
+    }
+
+
+</script>
+<style>
+   form {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+   }
+   #precioInput {
+    margin: 0;
+   }
+    #resultado {
+        text-align: center;
+    }
+    #errorUnidades, #errorDias, #errorPrecio {
+        color: red;
+        visibility: hidden;
+        text-align: center;
+}
+</style>
