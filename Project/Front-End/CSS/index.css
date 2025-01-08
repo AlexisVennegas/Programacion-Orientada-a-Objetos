@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    background-image: url("../Assets/wallpaper.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+    
+.central {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: 1px solid red;
+} 
+    
+
+ /* Estilos generales del modal */
+
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+
+ }
+ .wrapper {
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+    height: 844px;
+    width: 390px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+ }
+ .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+    height: 844px;
+    width: 390px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background-image: url("../Assets/wallpaper.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.slide {
+    display: none;
+    margin-top: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.slide.active {
+    display: block;
+
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    width: 342px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 100px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+
+/* seccion de loggin */
+
+.container {
+    background: white;
+   
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.targetHome {
+    border: none;
+    border-bottom: none;
+    /* quitar el borde abajoal href */
+    text-decoration: none;
+    color: white;
+}
+h2 {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+p {
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 342px;
+    height: 50px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-primary { margin-top: 440px; background: #007bff; color: white; }
+.btn-secondary { background: #007bff; color: white; }
+.btn-facebook { background: #3b5998; color: white; }
+.btn-google { background: #db4437; color: white; }
+
+.form-group {
+    text-align: left;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+input {
+    width: 342px;
+    height: 50px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+}
+
+/* Ocultar la pantalla de registro por defecto */
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
