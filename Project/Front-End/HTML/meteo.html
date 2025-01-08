@@ -5,27 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FireGuardian</title>
     <link rel="shortcut icon" href="../Assets/Shield.png" type="image/x-icon">
-    <link rel="stylesheet" href="../CSS/home.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="../CSS/meteo.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <h1 class="title-header">Risk Map</h1>
+            <h1 class="title-header">Weather station</h1>
         </header>
         <div class="container">
-            <div id="map">
-                <button id="locationButton"><img src="../Assets/gps.png" alt=""></button>
-                <div class="icons-range">
-                    <div class="icon-low">Low</div>
-                    <div class="icon-mid">Mid</div>
-                    <div class="icon-hight">Hight</div>
-
+            <div class="weather-container">
+                <div class="weather-info">
+                    <div>
+                        <h2 id="temperature">--°C</h2>
+                        <p>Temperatura</p>
+                    </div>
+                    <div>
+                        <h2 id="humidity">--%</h2>
+                        <p>Humedad</p>
+                    </div>
+                    <div>
+                        <h2 id="pressure">-- hPa</h2>
+                        <p>Presión</p>
+                    </div>
                 </div>
+                <canvas id="weatherChart" width="400" height="200"></canvas>
+                <h3>Pronóstico</h3>
+                <div class="forecast" id="forecast"></div>
             </div>
-            
         </div>
         <div class="buttons">
             <div class="icon-footer icon-home">
@@ -60,8 +67,6 @@
             </div>
         </div>
     </div>
-    <script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="../JS/home2.js"></script>
+    <script src="../JS/meteo.js"></script>
 </body>
 </html>
