@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../CSS/meteo.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -15,23 +17,44 @@
         </header>
         <div class="container">
             <div class="weather-container">
-                <div class="weather-info">
-                    <div>
-                        <h2 id="temperature">--°C</h2>
-                        <p>Temperatura</p>
+                <div class="weather-section1">
+                    <div class="first-info-weather">
+                        <div class="weather-icon-div">
+                            <img class="weather-icon-img" src="../Assets/sol.png" alt="logo sol">
+                            <p class="name-ubication"></p>
+                        </div>
+                        <div class="weather-info-div">
+                            <div class="temperature">
+                                <span class="arrow">^</span>
+                                
+                                <sup class="arrow-first"></sup>
+                                <sup class="arrow-second"></sup>
+                                <span class="degree">°</span>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h2 id="humidity">--%</h2>
-                        <p>Humedad</p>
+                    <div class="second-info-weather">
+                        <div class="weather-presion">
+                            <span>
+                                Pressure
+                            </span>
+                            <span  class="pressure"></span>
+                        </div>
+                        <div class="weather-sensacion">
+                            <span >Feels like</span>
+                            <span class="feels-like">2222</span>
+                        </div>
+                        <div class="weather-humedad">
+                            <span >Humidity</span>
+                            <span class="humidity">2222</span>
+                        </div>
                     </div>
-                    <div>
-                        <h2 id="pressure">-- hPa</h2>
-                        <p>Presión</p>
-                    </div>
+                
                 </div>
-                <canvas id="weatherChart" width="400" height="200"></canvas>
-                <h3>Pronóstico</h3>
-                <div class="forecast" id="forecast"></div>
+                <div class="weather-section2">
+                    <canvas id="weatherChart"></canvas>
+
+                </div>
             </div>
         </div>
         <div class="buttons">
@@ -49,7 +72,7 @@
             </div>
             <div class="icon-footer icon-meteo">
                 <a href="meteo.html">
-                    <img src="../Assets/meteo.png" alt="icono meteo">
+                    <img src="../Assets/meteo-select.png" alt="icono meteo">
                     <p>Meteo</p>
                 </a>
             </div>
@@ -69,4 +92,5 @@
     </div>
     <script src="../JS/meteo.js"></script>
 </body>
+
 </html>
