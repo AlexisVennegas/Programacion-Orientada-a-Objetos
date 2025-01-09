@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts</title>
+    <link rel="stylesheet" href="../CSS/alerts.css">
+    <link rel="shortcut icon" href="../Assets/Shield.png" type="image/x-icon">
+    
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="title-header">Alerts</h1>
+        </header>
+        <div class="container">
+  <!-- Modal de Alerta Destacada -->
+  <div id="alertModal" class="modalo">
+    <div class="modal-contento">
+        <span class="close">&times;</span>
+        <img src="../Assets/cuidado.png" alt="icono de cuidado">
+        <h2>POTENTIAL FIRE IN [Zone Name]</h2>
+        <div class="container-img">
+            <img src="../Assets/activate-rojo.png" alt="icono de activo" class="activate">
+            <img src="../Assets/fuego.png" alt="imagen de fuego" class="fuego-img">
+        </div>
+        <div class="alert-details">
+            <p><strong>Situation Details:</strong></p>
+            <p>Reported Location: [Coordinates or Description]</p>
+            <p>Additional updates will be provided as the situation unfolds. Coordinate with local authorities and follow safety protocols.</p>
+            <p>Speed and coordination are crucial at this time! Stay safe and be prepared to take action."            </p>
+        
+            <button id="goToMaps" class="btn-maps">Go to maps</button>
+        </div>
+    </div>
+</div>
+
+<!-- Línea de tiempo de Notificaciones -->
+<div class="alerts-container">
+    <div class="timeline">
+        <!-- Aquí irán las alertas, que puedes cargar dinámicamente -->
+        <div class="timeline-item">
+            <div class="timeline-time">09:10</div>
+            <div class="timeline-content pending">
+                <p><strong>Fire risk:</strong> Solosancho, Andalucía, España</p>
+                <p>Coordinates: 37.0431° N, 6.4665° W</p>
+                <button class="btn">Go to maps</button>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">11:30</div>
+            <div class="timeline-content active">
+                <p><strong>Declared Fire:</strong> Solosancho, Andalucía, España</p>
+                <p>Coordinates: 37.0431° N, 6.4665° W</p>
+                <button class="btn">Go to maps</button>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">11:30</div>
+            <div class="timeline-content pending">
+                <p><strong>Fire risk:</strong> Solosancho, Andalucía, España</p>
+                <p>Coordinates: 37.0431° N, 6.4665° W</p>
+                <button class="btn">Go to maps</button>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">11:30</div>
+            <div class="timeline-content active">
+                <p><strong>Declared Fire:</strong> Solosancho, Andalucía, España</p>
+                <p>Coordinates: 37.0431° N, 6.4665° W</p>
+                <button class="btn">Go to maps</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>  
+        <div class="buttons">
+            <div class="icon-footer icon-home">
+                <a href="home.html">
+                    <img src="../Assets/home.png" alt="icono home">
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-alerts">
+                <a href="alerts.html">
+                    <img src="../Assets/alert-selection.png" alt="icono alertas">
+                    <p>Alerts</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-meteo">
+                <a href="meteo.html">
+                    <img src="../Assets/meteo.png" alt="icono meteo">
+                    <p>Meteo</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-dates">
+                <a href="dates.html">
+                    <img src="../Assets/dates.png" alt="icono fechas">
+                    <p>Dates</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-settings">
+                <a href="settings.html">
+                    <img src="../Assets/settings.png" alt="icono ajustes">
+                    <p>Settings</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../JS/alerts.js"></script>
+</body>
+</html>

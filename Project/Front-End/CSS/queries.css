@@ -4,10 +4,7 @@
         height: 100% !important;
     }
     .modal-content {
-        border: 1px solid red;
-    
         background: white;
-        border-radius: 8px;
         text-align: center;
         height: 100%;
         width: 100%;
@@ -49,5 +46,17 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+    }
+    .modal-contento {
+        width: 80% !important;
+        height: 80% !important;
+    }
+    .alert-details {
+        margin: 20px 0;
+        text-align: left !important;
+        font-size: 20px !important;
+        width: 100% !important;
+        height: 290px;
+        overflow-y: auto;
     }
 }
