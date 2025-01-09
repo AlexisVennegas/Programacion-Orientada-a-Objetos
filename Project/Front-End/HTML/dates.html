@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dates</title>
+    <link rel="stylesheet" href="../CSS/dates.css">
+    <link rel="shortcut icon" href="../Assets/Shield.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="title-header">Dates</h1>
+        </header>
+        <div class="container">
+              <!-- Header con Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'activeBurns')">ACTIVE BURNS</button>
+            <button class="tab-btn" onclick="openTab(event, 'dates')">DATES</button>
+        </div>
+
+        <!-- Sección de notificaciones de quemas activas -->
+        <div id="activeBurns" class="tab-content">
+            <!-- Lista de quemas activas -->
+            <div class="notification">
+                <p><strong>Rincon Cordero</strong></p>
+                <p>Location: Solosancho, Andalucía, España</p>
+                <p>Coordinates: 37.0431° N, 6.4665° W</p>
+                <p>Phone: 633406108</p>
+                <button class="btn">Go to maps</button>
+            </div>
+
+            <div class="notification">
+                <p><strong>Rincon Cordero</strong></p>
+                <p>Location: Solosancho, Andalucía, España</p>
+                <p>Coordinates: 37.0431° N, 6.4665° W</p>
+                <p>Phone: 633406108</p>
+                <button class="btn">Go to maps</button>
+            </div>
+
+            <div class="notification">
+                <p><strong>Rincon Cordero</strong></p>
+                <p>Location: Solosancho, Andalucía, España</p>
+                <p>Coordinates: 37.0431° N, 6.4665° W</p>
+                <p>Phone: 633406108</p>
+                <button class="btn">Go to maps</button>
+            </div>
+        </div>
+
+        <!-- Sección de fechas de prohibición -->
+        <div id="dates" class="tab-content" style="display: none;">
+            <!-- Lista de fechas de prohibición -->
+            <div class="date-notification">
+                <p><strong>SOLOSANCHO</strong></p>
+                <p>Burns will be allowed during the following hours:</p>
+                <p>Dates: 15-05-24 to 01-10-24</p>
+                <p>DESDE: 12:00</p>
+                <p>HASTA: 20:00</p>
+            </div>
+
+            <div class="date-notification">
+                <p><strong>ALMENDRALES</strong></p>
+                <p>Prohibition dates: 15-05-24 to 01-10-24</p>
+                <p>FROM: 12:00</p>
+                <p>TO: 20:00</p>
+            </div>
+
+            <div class="date-notification">
+                <p><strong>VILLARDELREY</strong></p>
+                <p>Prohibition dates: 15-05-24 to 01-10-24</p>
+                <p>FROM: 12:00</p>
+                <p>TO: 20:00</p>
+            </div>
+        </div>
+        </div>
+        <div class="buttons">
+            <div class="icon-footer icon-home">
+                <a href="home.html">
+                    <img src="../Assets/home.png" alt="icono home">
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-alerts">
+                <a href="alerts.html">
+                    <img src="../Assets/alert.png" alt="icono alertas">
+                    <p>Alerts</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-meteo">
+                <a href="meteo.html">
+                    <img src="../Assets/meteo.png" alt="icono meteo">
+                    <p>Meteo</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-dates">
+                <a href="dates.html">
+                    <img src="../Assets/dates-selection.png" alt="icono fechas">
+                    <p>Dates</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-settings">
+                <a href="settings.html">
+                    <img src="../Assets/settings.png" alt="icono ajustes">
+                    <p>Settings</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/dates.js"></script>
+</body>
+</html>
