@@ -1,0 +1,102 @@
+-- Operadores SET en SQL
+
+-- Los operadores SET en SQL se utilizan para combinar los resultados de dos o más consultas SELECT.
+-- Los operadores SET más comunes son UNION, UNION ALL, INTERSECT y EXCEPT.
+
+-- SELECT
+-- La instrucción SELECT se utiliza para seleccionar datos de una base de datos.
+-- La sintaxis básica de SELECT es la siguiente:
+
+SELECT column1, column2, ...
+FROM table_name;
+
+-- Ejemplo:
+SELECT nombre, edad
+FROM empleados;
+
+-- UNION
+-- El operador UNION se utiliza para combinar los resultados de dos o más consultas SELECT.
+-- Cada consulta dentro de UNION debe tener el mismo número de columnas en el conjunto de resultados con tipos de datos similares.
+
+SELECT column1, column2, ...
+FROM table1
+UNION
+SELECT column1, column2, ...
+FROM table2;
+
+-- UNION ALL
+-- El operador UNION ALL es similar a UNION, pero incluye todos los registros duplicados.
+
+SELECT column1, column2, ...
+FROM table1
+UNION ALL
+SELECT column1, column2, ...
+FROM table2;
+
+-- INTERSECT
+-- El operador INTERSECT se utiliza para devolver los registros que son comunes a ambas consultas SELECT.
+
+SELECT column1, column2, ...
+FROM table1
+INTERSECT
+SELECT column1, column2, ...
+FROM table2;
+
+-- EXCEPT
+-- El operador EXCEPT se utiliza para devolver los registros de la primera consulta SELECT que no están en la segunda consulta SELECT.
+
+
+
+SELECT column1, column2, ...
+FROM table1
+EXCEPT
+SELECT column1, column2, ...
+FROM table2;
+
+
+-- VISTAS
+-- Una vista es una tabla virtual basada en el resultado de una consulta SELECT.
+-- Las vistas no almacenan datos físicamente, sino que muestran datos de una o más tablas.
+
+-- Crear una vista
+-   TE VIEW se utiliza para crear una vista.
+-- La sintaxis básica de CREATE VIEW es la siguiente:
+
+CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+-- Ejemplo:
+CREATE VIEW vista_empleados AS
+SELECT nombre, edad
+FROM empleados
+WHERE edad > 30;
+
+-- Consultar una vista
+-- Puedes consultar una vista de la misma manera que consultas una tabla.
+
+SELECT * FROM vista_empleados;
+
+-- Actualizar una vista
+-- Puedes actualizar una vista utilizando la instrucción CREATE OR REPLACE VIEW.
+
+CREATE OR REPLACE VIEW vista_empleados AS
+SELECT nombre, edad, departamento
+FROM empleados
+WHERE edad > 30;
+
+-- Eliminar una vista
+-- La instrucción DROP VIEW se utiliza para eliminar una vista existente.
+
+DROP VIEW vista_empleados;
+
+
+
+SELECT pais.nombre AS nombre_pais, ciudad.nombre AS nombre_ciudad, COUNT(departamento.id) AS numero_departamentos
+FROM empleados
+JOIN departamento ON empleados.departamento_id = departamento.id
+JOIN ciudad ON departamento.ciudad_id = ciudad.id
+JOIN pais ON ciudad.pais_id = pais.id
+GROUP BY pais.nombre, ciudad.nombre
+HAVING COUNT(empleados.id) >= 2;
