@@ -1,0 +1,192 @@
+@import url("../CSS/queries.css");
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    background-image: url("../Assets/wallpaper.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+    
+.central {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: 1px solid red;
+} 
+    
+
+ /* Estilos generales del modal */
+
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ }
+ .wrapper {
+    background: white;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); */
+ }
+
+
+ .sign-title {
+    font-size: 30px;
+    font-weight: bold;
+ }	
+ .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.7); */
+    visibility: visible;
+
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal-content {
+
+    background: white;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); */
+    background-image: url("../Assets/wallpaper.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-position-y: -1050px;
+}
+.first-title {
+    font-size: 55px;
+    font-weight: bold;
+}
+.first-phat {
+    font-size: 40px;
+    color: #666;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.slide {
+    width: 100%;
+    height: 60%;
+    display: none;
+    margin-top: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.slide > img {
+    width: 250px;
+    height: 250px;
+}
+
+.slide.active {
+    display: block;
+
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    width: 342px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 100px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+
+/* seccion de loggin */
+
+.container {
+  
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.targetHome {
+    border: none;
+    border-bottom: none;
+    /* quitar el borde abajoal href */
+    text-decoration: none;
+    color: white;
+}
+h2 {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+p {
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 342px;
+    height: 50px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-primary { margin-top: 440px; background: #007bff; color: white; }
+.btn-secondary { background: #007bff; color: white; }
+.btn-facebook { background: #3b5998; color: white; }
+.btn-google { background: #db4437; color: white; }
+
+.form-group {
+    text-align: left;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+input {
+    width: 342px;
+    height: 50px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+}
+
+/* Ocultar la pantalla de registro por defecto */
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}

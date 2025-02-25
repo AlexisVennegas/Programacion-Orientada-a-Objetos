@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo</title>
+    <link rel="shortcut icon" href="Assets/Shield.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/meteo.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="title-header">Weather station</h1>
+        </header>
+        <div class="container">
+            <div class="weather-container">
+                <div class="weather-section1">
+                    <div class="first-info-weather">
+                        <div class="weather-icon-div">
+                            <img class="weather-icon-img" src="Assets/sol.png" alt="logo sol">
+                            <p class="name-ubication"></p>
+                        </div>
+                        <div class="weather-info-div">
+                            <div class="temperature">
+                                <span class="arrow">^</span>
+                                
+                                <sup class="arrow-first"></sup>
+                                <sup class="arrow-second"></sup>
+                                <span class="degree">°</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-info-weather">
+                        <div class="weather-presion">
+                            <span>
+                                Pressure
+                            </span>
+                            <span  class="pressure"></span>
+                        </div>
+                        <div class="weather-sensacion">
+                            <span >Feels like</span>
+                            <span class="feels-like">2222</span>
+                        </div>
+                        <div class="weather-humedad">
+                            <span >Humidity</span>
+                            <span class="humidity">2222</span>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="weather-section2">
+                    <canvas id="weatherChart"></canvas>
+
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="icon-footer icon-home">
+                <a href="map.html">
+                    <img src="Assets/home.png" alt="icono home">
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-alerts">
+                <a href="alerts.html">
+                    <img src="Assets/alert.png" alt="icono alertas">
+                    <p>Alerts</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-meteo">
+                <a href="meteo.html">
+                    <img src="Assets/meteo-select.png" alt="icono meteo">
+                    <p>Meteo</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-dates">
+                <a href="dates.html">
+                    <img src="Assets/dates.png" alt="icono fechas">
+                    <p>Dates</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-settings">
+                <a href="settings.html">
+                    <img src="Assets/settings.png" alt="icono ajustes">
+                    <p>Settings</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="JS/meteo.js"></script>
+</body>
+
+</html>
