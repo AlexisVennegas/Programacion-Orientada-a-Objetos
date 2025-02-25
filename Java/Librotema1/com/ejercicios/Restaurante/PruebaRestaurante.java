@@ -1,4 +1,4 @@
-package com.ejercicios;
+package com.ejercicios.Restaurante;
 
 public class PruebaRestaurante {
 
@@ -7,7 +7,7 @@ public class PruebaRestaurante {
 		System.out.print("\n");
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		Restaurante restaurante = new Restaurante();
 		int huevosdocena,
 			kilosCarne,
@@ -30,10 +30,11 @@ public class PruebaRestaurante {
 			restaurante.sirvePlato();
 			huevos = restaurante.getHuevos();
 			chorizoGms = restaurante.getChorizo();
-			totalPlatos++;
+			totalPlatos = restaurante.getNumPlatos(); // Aquí ya obtienes el número total de platos
+
 		}
 		
-		Imp("totalPlatos: " + totalPlatos);
+		
 		
 		
 		

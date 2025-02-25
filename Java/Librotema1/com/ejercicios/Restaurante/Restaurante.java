@@ -1,4 +1,4 @@
-package com.ejercicios;
+package com.ejercicios.Restaurante;
 
 
 /* 
@@ -11,6 +11,11 @@ public class Restaurante {
 		kilosChorizo,
 		platos;
 	
+	// Restaurante(int docenasDeHuevos, double kgDeChorizo) {
+	 //   huevos = docenasDeHuevos * 12;  // Conversión de docenas a huevos
+	  //  chorizo = (int) (kgDeChorizo * 1000);  // Conversión de kilos a gramos
+//	}
+
 	double chorizoGms;
 	
 	public void Imprimir(Object object) {
@@ -18,8 +23,8 @@ public class Restaurante {
 		System.out.print("\n");
 	}
 	public void addHuevos(int numero) {
-		docenasHuevo = huevos +  numero;
-		huevos = docenasHuevo * 12;
+		docenasHuevo += numero; 
+		huevos = docenasHuevo * 12; 
 		Imprimir("Añadiste: "  + docenasHuevo + " docenas de huevos ");
 	}
 	public void addChorizo(int numero) {
