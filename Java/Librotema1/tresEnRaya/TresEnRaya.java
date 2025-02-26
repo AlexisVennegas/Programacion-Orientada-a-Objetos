@@ -144,17 +144,20 @@ public class TresEnRaya {
     	
     	while (ganador) {  
     		ImprimirTablero();
-    		Imp("Buenas, elige casilla: (1-9)\n");
+    		Imp("Elige casilla: (1-9)\n");
     		Imp("X: Jugador || O: Máquina\n");
 
     		casillaJugador = scanner.next();
     		if(comprobarExistente(casillaJugador)) {
-    			Imp("Pieza ocupada");
-    			casillaJugador = scanner.next();
+    			Imp("casilla ocupada, Elige otra\n");
+    			//casillaJugador = scanner.next();
     		}else {
     			jugadaValida = cambiarPieza(casillaJugador, true);     			
     			eleccionMaquina = eleccionMaquina(casillaJugador);
+    			Imp("casilla seleccionada: " + casillaJugador + "\n");
+    			Imp("Casilla maquina : " + eleccionMaquina + "\n");
     		}
+    		//ganador = comprobarGanador()
     		if(comprobarGanador("X")) {
     			Imp("haz ganado!\n");
     			ganador = false;
