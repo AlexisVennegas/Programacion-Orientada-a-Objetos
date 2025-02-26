@@ -6,7 +6,7 @@ public class PruebaRestaurante {
 		System.out.print(object);
 		System.out.print("\n");
 	}
-	/*
+	
 	public static void main(String[] args) {
 	
 		Restaurante restaurante = new Restaurante();
@@ -40,5 +40,5 @@ public class PruebaRestaurante {
 		
 		
 	}
-*/
+
 }

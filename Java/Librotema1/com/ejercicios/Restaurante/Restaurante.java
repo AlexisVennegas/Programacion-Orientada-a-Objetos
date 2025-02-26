@@ -6,7 +6,7 @@ package com.ejercicios.Restaurante;
  * 		
  */
 public class Restaurante {
-	int docenasHuevo,
+	public int docenasHuevo,
 		huevos,
 		kilosChorizo,
 		platos;
