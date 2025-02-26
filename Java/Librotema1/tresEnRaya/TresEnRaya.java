@@ -95,20 +95,46 @@ public class TresEnRaya {
 }
 
     
-    public static boolean comprobarGanador(String casilla) {
+    public static boolean comprobarGanador(String casilla, boolean check) {
     	//Imp("hola " + matriz[0][0]);
-    	if (matriz[1][0].trim().equals(casilla) && matriz[3][0].trim().equals(casilla) && matriz[5][0].trim().equals(casilla)) return true;
-        if (matriz[1][1].trim().equals(casilla) && matriz[3][1].trim().equals(casilla) && matriz[5][1].trim().equals(casilla)) return true;
-        if (matriz[1][2].trim().equals(casilla) && matriz[3][2].trim().equals(casilla) && matriz[5][2].trim().equals(casilla)) return true;
+    	String ganador = "X";
+    	
+    	if(comprobarGanador("X", true)) {
+			Imp("haz ganado!\n");
+		
+			ImprimirTablero();
+		}
+		else if(comprobarGanador("O", true)) {
+			
+		}
+		
+    	if (matriz[1][0].trim().equals(casilla) && matriz[3][0].trim().equals(casilla) && matriz[5][0].trim().equals(casilla)) ganador = true;
+        if (matriz[1][1].trim().equals(casilla) && matriz[3][1].trim().equals(casilla) && matriz[5][1].trim().equals(casilla)) ganador = true;
+        if (matriz[1][2].trim().equals(casilla) && matriz[3][2].trim().equals(casilla) && matriz[5][2].trim().equals(casilla)) ganador = true;
        
-        if (matriz[1][0].trim().equals(casilla) && matriz[1][1].trim().equals(casilla) && matriz[1][2].trim().equals(casilla)) return true;
-        if (matriz[3][0].trim().equals(casilla) && matriz[3][1].trim().equals(casilla) && matriz[3][2].trim().equals(casilla)) return true;
-        if (matriz[5][0].trim().equals(casilla) && matriz[5][1].trim().equals(casilla) && matriz[5][2].trim().equals(casilla)) return true;
+        if (matriz[1][0].trim().equals(casilla) && matriz[1][1].trim().equals(casilla) && matriz[1][2].trim().equals(casilla)) ganador = true;
+        if (matriz[3][0].trim().equals(casilla) && matriz[3][1].trim().equals(casilla) && matriz[3][2].trim().equals(casilla)) ganador = true;
+        if (matriz[5][0].trim().equals(casilla) && matriz[5][1].trim().equals(casilla) && matriz[5][2].trim().equals(casilla)) ganador = true;
 
-        if (matriz[1][0].trim().equals(casilla) && matriz[3][1].trim().equals(casilla) && matriz[5][2].trim().equals(casilla)) return true;
-        if (matriz[5][0].trim().equals(casilla) && matriz[3][1].trim().equals(casilla) && matriz[1][2].trim().equals(casilla)) return true;
+        if (matriz[1][0].trim().equals(casilla) && matriz[3][1].trim().equals(casilla) && matriz[5][2].trim().equals(casilla)) ganador = true;
+        if (matriz[5][0].trim().equals(casilla) && matriz[3][1].trim().equals(casilla) && matriz[1][2].trim().equals(casilla)) ganador = true;
         
-        return false;
+        
+        if (ganador == "jugador") {
+        	Imp("haz ganado!\n");
+        
+        	return(true);
+        }
+        else if(ganador == "maquina" ) {
+        	Imp("Gano la maquina!\n");
+        	return(true);
+		
+        }
+        else {
+        	 return (false);
+        }
+    	ImprimirTablero();
+       
     }
 
     
@@ -157,18 +183,8 @@ public class TresEnRaya {
     			Imp("casilla seleccionada: " + casillaJugador + "\n");
     			Imp("Casilla maquina : " + eleccionMaquina + "\n");
     		}
-    		//ganador = comprobarGanador()
-    		if(comprobarGanador("X")) {
-    			Imp("haz ganado!\n");
-    			ganador = false;
-    			ImprimirTablero();
-    		}
-    		else if(comprobarGanador("O")) {
-    			Imp("Gano la maquina!\n");
-    			ganador = false;
-    			ImprimirTablero();
-    		}
-    		
+    		ganador = comprobarGanador(null ,false);
+    	
     	
     	
     	}
