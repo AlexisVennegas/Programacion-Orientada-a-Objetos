@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireGuardian</title>
+    <link rel="shortcut icon" href="Assets/Shield.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/map.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="title-header">Risk Map</h1>
+        </header>
+        <div class="container">
+            <div id="map">
+                <button id="locationButton"><img src="Assets/gps.png" alt=""></button>
+                <div class="icons-range">
+                    <div class="icon-low">Low</div>
+                    <div class="icon-mid">Mid</div>
+                    <div class="icon-hight">Hight</div>
+
+                </div>
+            </div>
+            
+        </div>
+        <div class="buttons">
+            <div class="icon-footer icon-home">
+                <a href="map.html">
+                    <img src="Assets/home-select.png" alt="icono home">
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-alerts">
+                <a href="alerts.html">
+                    <img src="Assets/alert.png" alt="icono alertas">
+                    <p>Alerts</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-meteo">
+                <a href="meteo.html">
+                    <img src="Assets/meteo.png" alt="icono meteo">
+                    <p>Meteo</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-dates">
+                <a href="dates.html">
+                    <img src="Assets/dates.png" alt="icono fechas">
+                    <p>Dates</p>
+                </a>
+            </div>
+            <div class="icon-footer icon-settings">
+                <a href="settings.html">
+                    <img src="Assets/settings.png" alt="icono ajustes">
+                    <p>Settings</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="JS/home2.js"></script>
+</body>
+</html>

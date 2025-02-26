@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireGuardian</title>
+    <link rel="shortcut icon" href="Assets/Shield.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="slide active">
+                <img src="Assets/Shield.png" alt="escudo logo">
+                <h1 class="first-title">Welcome!</h1>
+                <p class="first-phat"> FireGuardian is a specialized application designed for firefighters, providing personalized
+                    information
+                    and high-priority alerts within their assigned zones</p>
+            </div>
+            <div class="slide">
+                <img src="Assets/Map.png" alt="Mapa logo">
+                <h1 class="first-title" >
+                    Risk map
+                </h1>
+                <p class="first-phat">
+                    Discover areas categorized by our analysis system as low, medium, or high risk of wildfires. We use
+                    artificial intelligence technology and data analysis to assess risk accurately.
+                </p>
+            </div>
+            <div class="slide">
+                <img src="Assets/Nasa.png" alt="Firms logo">
+                <h1 class="first-title">
+                    FIRMS
+                </h1>
+                <p class="first-phat">
+                FIRMS provides global data on active wildfires derived from satellites and can be a valuable source for
+                monitoring and managing fire situations.
+            </p>
+            </div>
+            <div class="slide">
+                <img src="Assets/weather.png" alt="clima logo">
+                <h1 class="first-title">
+                    Weather station
+                </h1>
+                <p class="first-phat">
+                    Stay informed about current weather conditions in each area. Fireguardian integrates with reliable
+                    data
+                    sources to provide you with updates on temperature, wind speed, and humidity—key elements to
+                    understand
+                    the risk of wildfires.
+                </p>
+            </div>
+            <div class="slide">
+                <img src="Assets/alerts.png" alt="alertas logo">
+                <h1 class="first-title">
+                    Alerts
+                </h1>
+                <p class="first-phat">
+                    Receive immediate alerts upon the detection of possible fire outbreaks. Our cutting-edge technology
+                    and
+                    advanced data analysis will keep you one step ahead for a quicker and more efficient response.
+                </p>
+                <address></address>
+            </div>
+            <button id="nextBtn">Next</button>
+        </div>
+    </div>
+
+    <div class="wrapper">
+       
+        <div class="container">
+            <!-- Pantalla de Iniciar Sesión -->
+            <div id="signInScreen" class="screen active">
+                <h2 class="sign-title">Sign In</h2>
+                <p style="font-size: 58px;">Create an account</p>
+                <p style="padding: 0px 100px !important;">Create your account to fully experience the app</p>
+                <p style="font-size: 40px;">click a create account > despues  get started </p>
+                <button class="btn btn-primary">Sign Up</button>
+                <p>or sign in with</p>
+                <button class="btn btn-facebook">Continue with Facebook</button>
+                <button class="btn btn-google">Continue with Google</button>
+                <p><a href="#" id="goToSignUp">Create an account</a></p>
+            </div>
+
+            <!-- Pantalla de Crear Cuenta -->
+            <div id="signUpScreen" class="screen">
+                <h2 class="sign-title">Sign In</h2>
+                <p style="font-size: 28px;">Create an account</p>
+                <p style="padding: 0px 100px !important;">Create your account to fully experience the app</p>
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="email">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="password">
+                </div>
+                <a class="targetHome" href="map.html">
+                    <button class="btn btn-secondary">
+                        Get started
+                </a>
+                </button>
+                <p>
+                    forgot your password? <a href="#">reset here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="JS/home.js"></script>
+</body>
+
+</html>
