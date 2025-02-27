@@ -9,7 +9,7 @@ public class tablero {
 		iniciarTablero();
 	}
 	
-	private void iniciarTablero() {
+	public void iniciarTablero() {
 
 	    matriz[0][0] = " | ";
 	    matriz[1][0] = " 1 ";
