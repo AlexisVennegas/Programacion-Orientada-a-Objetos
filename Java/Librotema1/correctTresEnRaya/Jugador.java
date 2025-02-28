@@ -1,6 +1,7 @@
 package correctTresEnRaya;
 
 public class Jugador  {
+	
 	private String	nombre,
 					signo;
 	private Tablero tablero;
@@ -10,6 +11,7 @@ public class Jugador  {
 		this.signo = "X";
 		this.tablero = tablero;
 	}
+	
 	public String GetNombreJugador() {
 		return(this.nombre);
 	}

@@ -10,28 +10,30 @@ public class Restaurante {
 		huevos,
 		kilosChorizo,
 		platos;
-	
-	// Restaurante(int docenasDeHuevos, double kgDeChorizo) {
-	 //   huevos = docenasDeHuevos * 12;  // Conversión de docenas a huevos
-	  //  chorizo = (int) (kgDeChorizo * 1000);  // Conversión de kilos a gramos
-//	}
-
 	double chorizoGms;
 	
-	public void Imprimir(Object object) {
+	 Restaurante(int docenasDeHuevos, int kgDeChorizo) {
+	    this.huevos = docenasDeHuevos * 12;  
+	    this.kilosChorizo = kgDeChorizo;  
+	    this.chorizoGms = (kgDeChorizo * 1000);
+	}
+
+
+	
+	public void imprimir(Object object) {
 		System.out.print(object);
 		System.out.print("\n");
 	}
 	public void addHuevos(int numero) {
 		docenasHuevo += numero; 
 		huevos = docenasHuevo * 12; 
-		Imprimir("Añadiste: "  + docenasHuevo + " docenas de huevos ");
+		imprimir("Añadiste: "  + docenasHuevo + " docenas de huevos ");
 	}
 	public void addChorizo(int numero) {
 	
 		kilosChorizo = kilosChorizo + numero;
 		chorizoGms = (kilosChorizo * 1000);
-		Imprimir("Añadiste " + kilosChorizo + " kilos de kilos de chorizo");
+		imprimir("Añadiste " + kilosChorizo + " kilos de kilos de chorizo");
 	}
 	public int getNumPlatos() {
 		int result,

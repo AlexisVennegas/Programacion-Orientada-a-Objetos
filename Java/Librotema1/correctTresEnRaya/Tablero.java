@@ -35,6 +35,7 @@ public class Tablero {
 	    matriz[5][2] = " 9 ";
 	    matriz[6][2] = " | ";
 	}
+	
 	public String[][] getMatriz() {
 		return(this.matriz);
 	}

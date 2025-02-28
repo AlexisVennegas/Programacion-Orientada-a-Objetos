@@ -19,8 +19,7 @@ public class Partida {
 		this.eleccionMaquina = "";
 		this.eleccionJugador = "";
 		this.jugador1 = new Jugador(nombreJugador, this.tablero);
-		this.maquina = new Jugador("Marvin", this.tablero);
-		
+		this.maquina = new Jugador("Marvin", this.tablero);	
 		this.scannerJugador = new Scanner(System.in);
 		
 		while(ganador) {
@@ -65,12 +64,12 @@ public class Partida {
 	public boolean esEmpate() {
 	    for (int i = 1; i <= 7; i++) {
 	        for (int j = 0; j < 3; j++) {
-	            if (tablero.matriz[i][j].trim().matches("[1-9]")) { // Si hay una casilla libre, no hay empate
+	            if (tablero.matriz[i][j].trim().matches("[1-9]")) { 
 	                return false;
 	            }
 	        }
 	    }
-	    return true; // Si todas las casillas están llenas, es empate
+	    return true; 
 	}
 
 	
