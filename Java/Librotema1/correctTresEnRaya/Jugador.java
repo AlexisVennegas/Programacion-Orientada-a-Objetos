@@ -4,26 +4,18 @@ public class Jugador  {
 	
 	private String	nombre,
 					signo;
-	private Tablero tablero;
 	
-	Jugador(String nombre, Tablero tablero){
+	public Jugador(String nombre){
 		this.nombre = nombre;
 		this.signo = "X";
-		this.tablero = tablero;
 	}
 	
-	public String GetNombreJugador() {
+	public String getNombreJugador() {
 		return(this.nombre);
 	}
-	
-	  public String eleccionMaquina(String casillaJugador) {
-	        String eleccionMaquina;
-	        do {
-	            eleccionMaquina = String.valueOf((int) (Math.random() * 9 + 1));
-	        } while (tablero.comprobarExistente(eleccionMaquina)); // Asegurar que la casilla está libre
-
-	        tablero.cambiarPieza(eleccionMaquina, false);
-	        return eleccionMaquina;
-	    }
+	public String getSigno() {
+		return(this.signo);
+	}
+	 
 	
 }

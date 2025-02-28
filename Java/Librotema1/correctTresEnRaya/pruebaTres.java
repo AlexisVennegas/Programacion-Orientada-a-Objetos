@@ -6,6 +6,7 @@ public class pruebaTres {
 		Partida partidaNueva;
 		
 		partidaNueva = new Partida("Alexis");
+		
 	}
 
 }
