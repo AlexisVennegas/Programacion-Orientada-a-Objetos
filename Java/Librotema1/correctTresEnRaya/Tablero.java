@@ -47,7 +47,7 @@ public class Tablero {
 			for(int j = 0; j < 7; j++) {
 				   System.out.print(matriz[j][i]);
 			}
-			   System.out.print("\n");
+			   System.out.print("-\n");
 		}
 		
 	}
