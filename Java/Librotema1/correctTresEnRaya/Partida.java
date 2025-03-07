@@ -29,7 +29,7 @@ public class Partida {
 	
 	
 	public boolean esEmpate() {
-	    for (int i = 0; i < 3; i++) {
+	    for (int i = 0; i < 7; i++) {
 	        for (int j = 0; j < 3; j++) {
 	            // Comprobamos si la casilla contiene un número (del 1 al 9)
 	            if (tablero.matriz[i][j].trim().matches("[1-9]")) {
@@ -60,7 +60,7 @@ public class Partida {
     			imp("Casilla maquina : " + eleccionMaquina + "\n");
     			
     			if(esEmpate()) {
-        			ganador =false;
+    				ganador = false;
         			imp("tremendo empate!!");
         			return;
     			}
@@ -93,7 +93,7 @@ public class Partida {
 	        return eleccionMaquina;
 	    }
     
-    
+
     
     public  boolean comprobarGanador(String casilla) {
 	    

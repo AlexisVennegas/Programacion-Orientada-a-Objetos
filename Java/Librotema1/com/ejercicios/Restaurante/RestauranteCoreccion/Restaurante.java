@@ -24,5 +24,5 @@ package com.ejercicios.Restaurante.RestauranteCoreccion;
 	cámara
  */
 public class Restaurante {
-
 }
+
