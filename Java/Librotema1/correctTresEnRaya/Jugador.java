@@ -5,9 +5,9 @@ public class Jugador  {
 	private String	nombre,
 					signo;
 	
-	public Jugador(String nombre){
+	public Jugador(String nombre, String signo){
 		this.nombre = nombre;
-		this.signo = "X";
+		this.signo = signo;
 	}
 	
 	public String getNombreJugador() {

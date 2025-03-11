@@ -5,7 +5,7 @@ public class pruebaTres {
 	public static void main(String[] args) {
 		Partida partidaNueva;
 		
-		partidaNueva = new Partida("Alexis");
+		partidaNueva = new Partida("Alexis", "ñ");
 		
 	}
 

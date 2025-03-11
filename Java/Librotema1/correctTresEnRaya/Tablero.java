@@ -1,4 +1,5 @@
 package correctTresEnRaya;
+import correctTresEnRaya.MagicStrings;
 
 public class Tablero {
 	
@@ -47,7 +48,7 @@ public class Tablero {
 			for(int j = 0; j < 7; j++) {
 				   System.out.print(matriz[j][i]);
 			}
-			   System.out.print("-\n");
+			   System.out.print("\n");
 		}
 		
 	}
@@ -65,16 +66,17 @@ public class Tablero {
 	    for (int i = 0; i < 7; i++) { 
 	        for (int j = 0; j < 3; j++) { 
 	            if (casillaJugador.equals(matriz[i][j].trim()) && jugador) { 
-	               matriz[i][j] = " X ";  
+	               matriz[i][j] = MagicStrings.FICHA_X;  	
 	                //Imp("Entré al if\n");
 	                return true; 
 	            }
 	            else if (casillaJugador.equals(matriz[i][j].trim()) && !(jugador)) { 
-	                matriz[i][j] = " O ";  
+	                matriz[i][j] = MagicStrings.FICHA_O;  
 	              
 	              
 	            } 
 	        }}
 	    return true; 
 	    }
+	
 }

@@ -12,14 +12,14 @@ public class Partida {
 			eleccionJugador;
 	Scanner scannerJugador;
 	
-	public Partida(String nombreJugador) {
+	public Partida(String nombreJugador, String signo) {
 		this.tablero = new Tablero();
 		this.ganador = true;
 		this.jugadaValida = false;
 		this.eleccionMaquina = "";
 		this.eleccionJugador = "";
-		this.jugador1 = new Jugador(nombreJugador);
-		this.maquina = new Jugador("Marvin");	
+		this.jugador1 = new Jugador(nombreJugador, 	"X");
+		this.maquina = new Jugador("Marvin", "O");	
 		this.scannerJugador = new Scanner(System.in);
 		jugar();
 	}
@@ -42,6 +42,8 @@ public class Partida {
 
 
 	public  void jugar() {
+		try
+		{
 		while(ganador) {
 			tablero.imprimirTablero();
 			
@@ -56,6 +58,8 @@ public class Partida {
     			
     			jugadaValida = tablero.cambiarPieza(eleccionJugador, true);     			
     			eleccionMaquina = eleccionMaquina(eleccionJugador);
+    			//new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
     			imp("casilla seleccionada: " + eleccionJugador + "\n");
     			imp("Casilla maquina : " + eleccionMaquina + "\n");
     			
@@ -77,9 +81,13 @@ public class Partida {
         		}
     		}
     	
-    		
+    
 		}
 		scannerJugador.close();
+		}
+		catch (Exception e){
+			imp(e);
+		}
 	}
 	
     
@@ -97,6 +105,17 @@ public class Partida {
     
     public  boolean comprobarGanador(String casilla) {
 	    
+//    	for(int i = 0; i < 3; i++) {
+//    		if(tablero.matriz[1][i].trim().equals(casilla) && tablero.matriz[3][i].equals(casilla) && tablero.matriz[5][i].trim().equals(casilla)) return true;
+//    	}
+//    	
+//    	for(int j = 1; j < 5; j++) {
+//			if(tablero.matriz[j][0].trim().equals(casilla) && tablero.matriz[j][1].equals(casilla) && tablero.matriz[j][2].trim().equals(casilla)) return true;
+//    	}
+//	
+    	
+    	
+    	
     	if (tablero.matriz[1][0].trim().equals(casilla) && tablero.matriz[3][0].trim().equals(casilla) && tablero.matriz[5][0].trim().equals(casilla)) return true;
         if (tablero.matriz[1][1].trim().equals(casilla) && tablero.matriz[3][1].trim().equals(casilla) && tablero.matriz[5][1].trim().equals(casilla)) return true;
         if (tablero.matriz[1][2].trim().equals(casilla) && tablero.matriz[3][2].trim().equals(casilla) && tablero.matriz[5][2].trim().equals(casilla)) return true;
