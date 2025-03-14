@@ -5,7 +5,7 @@ public class Tablero {
 	
 	
 	public String[][] matriz;
-	public Tablero() {
+	private Tablero() {
 		this.matriz = new String[7][3];
 
 	    //  primera fila 
