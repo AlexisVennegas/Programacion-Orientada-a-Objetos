@@ -5,7 +5,9 @@ public class Tablero {
 	
 	
 	public String[][] matriz;
-	private Tablero() {
+	
+	
+		private Tablero() {
 		this.matriz = new String[7][3];
 
 	    //  primera fila 
@@ -52,6 +54,7 @@ public class Tablero {
 		}
 		
 	}
+	
 	public  boolean comprobarExistente(String Casilla) {
 		  for (int i = 0; i < 7; i++) { 
 		        for (int j = 0; j < 3; j++) { 
@@ -62,6 +65,7 @@ public class Tablero {
 		  }
 		  return(true);
 	}
+	
 	public boolean cambiarPieza(String casillaJugador, boolean jugador) {
 	    for (int i = 0; i < 7; i++) { 
 	        for (int j = 0; j < 3; j++) { 
