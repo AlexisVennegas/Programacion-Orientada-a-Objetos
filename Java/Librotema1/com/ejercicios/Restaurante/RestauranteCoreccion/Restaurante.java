@@ -24,5 +24,43 @@ package com.ejercicios.Restaurante.RestauranteCoreccion;
 	cámara
  */
 public class Restaurante {
+<<<<<<< HEAD
+=======
+	
+	private  Ingredientes huevos;
+	private  Ingredientes gmsChorizo;
+	private  Platos platos;
+	Restaurante(int docenasHuevos, double kilosChorizo){
+		this.huevos = new Ingredientes("Huevo", docenasHuevos * 12);
+		this.gmsChorizo = new Ingredientes("Chorizo", kilosChorizo * 1000);
+		this.platos = new Platos("huevos", 2);
+	}
+	
+	
+	public int getNumPlatos() {
+		
+		int 	totalPlatos;
+		double 	huevosAux,
+				chorizoAux;
+		
+			totalPlatos = 0;
+			huevosAux = this.huevos.getCantidad();
+			chorizoAux = this.gmsChorizo.getCantidad();
+		
+		while(huevosAux > platos.getHuevosPorPlato() && chorizoAux > platos.getChorizoPorPlato()) {
+			totalPlatos++;
+			huevosAux -= platos.getHuevosPorPlato();
+			chorizoAux -= platos.getChorizoPorPlato();
+		}
+		return(totalPlatos);
+	}
+	
+	
+	public void sirvePlato() {
+		this.huevos.setCantidad(this.huevos.getCantidad()-platos.getHuevosPorPlato()); 
+		this.gmsChorizo.setCantidad(this.gmsChorizo.getCantidad()-platos.getChorizoPorPlato());
+	}
+	
+>>>>>>> 3a7a5acc7dcb742c39f1cb0e4b04bedffe157f22
 }
 

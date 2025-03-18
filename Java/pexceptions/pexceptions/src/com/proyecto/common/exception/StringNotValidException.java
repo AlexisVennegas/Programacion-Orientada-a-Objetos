@@ -1,7 +1,14 @@
 package com.proyecto.common.exception;
 
-public class StringNotValidException {
+public class StringNotValidException extends Exception  {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * 
+	 */
 	// Paso 1.Indicar atributo protegido de tipo String llamado "code"
 	protected String code;
 
