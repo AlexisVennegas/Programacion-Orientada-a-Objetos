@@ -1,6 +1,7 @@
 package com.proyecto.common.exception;
 
 //Paso 1. Identificar esta clase commo hija de StringNotValidException
+@SuppressWarnings("serial")
 public class StringTooLongException extends StringNotValidException {
 
 

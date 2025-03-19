@@ -26,9 +26,10 @@ public class Test {
 			} catch (Exception e) {
 				// Paso 4. Mostrar un mensaje adecuado a la excepción recogida
 				System.out.println(e.getMessage() + "entre aqui jeje");
-			
+				scanner.close();
 			
 		}
+			
 		}
 		
 	}
