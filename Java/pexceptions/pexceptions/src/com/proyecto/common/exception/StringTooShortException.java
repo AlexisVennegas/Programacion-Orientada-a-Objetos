@@ -20,6 +20,7 @@ public class StringTooShortException extends StringNotValidException {
 	// Paso 3. Implementar el constructor adecuado para asignar valor a todos
 	public StringTooShortException(String code, String message, String cadena) {
 		super(code, message);
+		
 		this.cadena = cadena;
 	}
 	

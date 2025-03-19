@@ -30,7 +30,7 @@ public class ValidationString {
             for (NotAllowedWord word : NotAllowedWord.values()) {
             	if (cadena.toLowerCase().equals(word.name().toLowerCase())) throw new NotAllowedWordsException(CodeErrors.WORD_NOT_ALLOWED_FOUND, "error palabra no valida", word);
             }
-		}catch (Exception e) {
+		}catch (StringNotValidException e) {
             //
             System.out.println(e.getMessage()); 
         }
