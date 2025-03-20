@@ -20,9 +20,13 @@ public class App {
 		IDAO<Long, Departamento> dao = new DepartamentoDAO();
 		
 		//SCAR A TODOS LOS DEPARAMENTOS
+		System.out.println("-------------- LISTADO DE PAISES ----------------");
 		for(Departamento departamento : dao.findAll()) {
 			System.out.println(departamento);
 		}
+		 System.out.println("-------------  UN UNICO PAIS------------");
+	     //Departamento departamento = dao.findOne(12);
+	     //System.out.println(departamento);
 	}
 
 }

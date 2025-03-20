@@ -6,14 +6,15 @@ public class StringTooLongException extends StringNotValidException {
 
 
 
-	public final int tamano = 0;
+	public final int tamano;
 	public String message;
 	//Paso 2. Indicar un atributo inmutable tipo int llamado "tamanyo"
 
 	//Paso 3. Implementar el constructor adecuado para asignar valor a todos
-	public StringTooLongException(String code, String message) {
+	public StringTooLongException(int tamano, String code, String message) {
 		super(code, message);
 		this.message = message;
+		this.tamano = tamano;
 	}
 	// los atributos de esta clase incluidos los heredados
 	

@@ -23,12 +23,16 @@ public class ValidationString {
 	
 	public static void validLenght(String cadena) {
 		try {
- 			if("".equals(cadena) || cadena == null) throw new StringNotValidException(CodeErrors.NO_STRING, "cadena vacia");
-			if(cadena.length() >= Constantes.TAMANO_MAX) throw new StringTooLongException(CodeErrors.STRING_TOO_LONG, "La cadena es demasiado larga.");
-			if(cadena.length() <= Constantes.TAMANO_MIN) throw new StringTooShortException(CodeErrors.STRING_TOO_SHORT, "la cadena es demasiado corta", cadena);
+ 			if("".equals(cadena) || cadena == null) 
+ 				throw new StringNotValidException(CodeErrors.NO_STRING, "cadena vacia");
+			if(cadena.length() >= Constantes.TAMANO_MAX) 
+				throw new StringTooLongException(cadena.length(), CodeErrors.STRING_TOO_LONG, "La cadena larga.");
+			if(cadena.length() <= Constantes.TAMANO_MIN) 
+				throw new StringTooShortException(cadena.length(), CodeErrors.STRING_TOO_SHORT, "la cadena corta", cadena);
 			  // Paso 1.4: Validar si la cadena contiene palabras no permitidas
             for (NotAllowedWord word : NotAllowedWord.values()) {
-            	if (cadena.toLowerCase().equals(word.name().toLowerCase())) throw new NotAllowedWordsException(CodeErrors.WORD_NOT_ALLOWED_FOUND, "error palabra no valida", word);
+            	if (cadena.toLowerCase().equals(word.name().toLowerCase())) 
+            		throw new NotAllowedWordsException(CodeErrors.WORD_NOT_ALLOWED_FOUND, "Cadena no valida", word);
             }
 		}catch (StringNotValidException e) {
             //
@@ -54,8 +58,8 @@ public class ValidationString {
 			throws StringNotValidException, StringTooLongException, StringTooShortException {
 			if("".equals(cadena) || cadena == null) throw new StringNotValidException(CodeErrors.NO_STRING, "Error");
 			//if(cadena.length() < maximo || cadena.length() < minimo) throw new StringNotValidException(CodeErrors.NO_STRING, "error");
-			if(cadena.length() >maximo) throw new StringTooLongException(CodeErrors.STRING_TOO_LONG, "La cadena es demasiado larga.");
-			if(cadena.length() < minimo) throw new StringTooShortException(CodeErrors.STRING_TOO_SHORT, "String corta", cadena);
+			if(cadena.length() >maximo) throw new StringTooLongException(cadena.length(), CodeErrors.STRING_TOO_LONG, "La cadena es demasiado larga.");
+			if(cadena.length() < minimo) throw new StringTooShortException(cadena.length(), CodeErrors.STRING_TOO_SHORT, "String corta", cadena);
 		}
 	
 

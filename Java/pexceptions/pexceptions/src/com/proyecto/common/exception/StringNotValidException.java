@@ -1,14 +1,9 @@
 package com.proyecto.common.exception;
 
-public class StringNotValidException extends Exception  {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	/**
-	 * 
-	 */
+@SuppressWarnings("serial")
+public class StringNotValidException extends Exception  {
+	
 	// Paso 1.Indicar atributo protegido de tipo String llamado "code"
 	protected String code;
 
@@ -17,9 +12,10 @@ public class StringNotValidException extends Exception  {
 	public StringNotValidException(String code, String message) {
 		super(message);
 		this.code = code;
+		System.out.println(this.code);
 	}
 
-	// Paso 3. Implementar un metodo para conseguir el valor del atributo "code"
+
 	public String getCode() {
 		return code;
 	}
