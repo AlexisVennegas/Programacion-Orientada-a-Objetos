@@ -17,13 +17,21 @@
     <fullyQualifiedTypeName name="com.proyecto.common.exception.StringTooShortException"/>
     <fullyQualifiedTypeName name="com.proyecto.common.exception.StringTooLongException"/>
     <fullyQualifiedTypeName name="com.proyecto.common.exception.CodeErrors"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="com.accesoDatos.dao.DriverManagerOracle"/>
     <fullyQualifiedTypeName name="com.proyecto.common.NotAllowedWord"/>
     <fullyQualifiedTypeName name="java.io.NotActiveException"/>
     <fullyQualifiedTypeName name="com.proyecto.common.exception.NotAllowedWordsException"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="com.proyecto.common.Constantes"/>
     <fullyQualifiedTypeName name="com.proyecto.common.util.ValidationString"/>
     <fullyQualifiedTypeName name="com.proyecto.common.exception.StringNotValidException"/>
+    <fullyQualifiedTypeName name="com.accesoDatos.dao.ContriesDAO"/>
+    <fullyQualifiedTypeName name="com.accesoDatos.dao.IDAO"/>
+    <fullyQualifiedTypeName name="com.accesoDatos.data.Countries"/>
+    <fullyQualifiedTypeName name="com.accesoDatos.data.Jobs"/>
+    <fullyQualifiedTypeName name="com.accesoDatos.dao.DriverManagerOracle"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.lang.EnumConstantNotPresentException"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="com.accesoDatos.dao.DAOException"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
 </qualifiedTypeNameHistroy>

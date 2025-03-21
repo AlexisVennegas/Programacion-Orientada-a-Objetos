@@ -114,8 +114,7 @@ public class Partida {
 //    	}
 //	
     	
-    	
-    	
+   
     	if (tablero.matriz[1][0].trim().equals(casilla) && tablero.matriz[3][0].trim().equals(casilla) && tablero.matriz[5][0].trim().equals(casilla)) return true;
         if (tablero.matriz[1][1].trim().equals(casilla) && tablero.matriz[3][1].trim().equals(casilla) && tablero.matriz[5][1].trim().equals(casilla)) return true;
         if (tablero.matriz[1][2].trim().equals(casilla) && tablero.matriz[3][2].trim().equals(casilla) && tablero.matriz[5][2].trim().equals(casilla)) return true;
