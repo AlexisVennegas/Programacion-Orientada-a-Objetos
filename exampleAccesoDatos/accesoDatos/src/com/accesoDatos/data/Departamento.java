@@ -15,6 +15,10 @@ public class Departamento implements Serializable{
 	public Departamento() {
 		super();
 	}
+	
+	public static void example() {
+
+	}
 
 	public Departamento(Long id, String nombre, Integer idManager, Long idLocalizacion) {
 		super();
