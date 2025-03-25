@@ -16,14 +16,8 @@ public class App {
 //        System.out.println(casa2.getName());
 //        
 //        
-     
-        int numero = 3;
-        
-        
-        int resultado = --numero;
-        System.out.println(resultado);
-        
-        resultado = numero--;
-        System.out.println(resultado);
-    }
+    	int x = 5;
+    	
+    	System.out.println(x++ + ++x);
+         }
 }
