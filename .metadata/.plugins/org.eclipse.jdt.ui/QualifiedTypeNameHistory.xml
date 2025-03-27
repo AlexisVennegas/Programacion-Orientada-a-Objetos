@@ -28,10 +28,22 @@
     <fullyQualifiedTypeName name="com.accesoDatos.data.Countries"/>
     <fullyQualifiedTypeName name="com.accesoDatos.data.Jobs"/>
     <fullyQualifiedTypeName name="com.accesoDatos.dao.DriverManagerOracle"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.lang.EnumConstantNotPresentException"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="com.accesoDatos.dao.DAOException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.tapla.admin.common.exceptions.CadenaCortaException"/>
+    <fullyQualifiedTypeName name="com.tapla.admin.common.exceptions.CadenaLargaException"/>
+    <fullyQualifiedTypeName name="com.tapla.admin.common.exceptions.CadenaException"/>
+    <fullyQualifiedTypeName name="com.tapla.admin.common.TipoExcepcion"/>
+    <fullyQualifiedTypeName name="com.tapla.admin.common.util.GeneradorUsername"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="com.tapla.admin.empleados.Administracion"/>
+    <fullyQualifiedTypeName name="com.tapla.admin.empleados.EmpleadoAdmin"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+    <fullyQualifiedTypeName name="java.io.Reader"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 </qualifiedTypeNameHistroy>
