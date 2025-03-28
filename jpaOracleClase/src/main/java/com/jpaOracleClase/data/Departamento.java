@@ -1,17 +1,25 @@
 package com.jpaOracleClase.data;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name= "DEPARTMENTS")
 public class Departamento {
 
 	@Id
+	@Column(name = "DEPARTMENT_ID")
 	private int id;
+	@Column(name = "DEPARTMENT_NAME")
 	private String nombre;
-	private Integer idGerente, idDireccion;
+	@Column(name = "MANAGER_ID")
+	private Integer idGerente;
+	@Column(name = "LOCATION_ID")
+	private Integer idDireccion;
 	
 //	public Departamento(int id, String nombre, Integer idGerente, Integer idDireccion) {
 //		super();
