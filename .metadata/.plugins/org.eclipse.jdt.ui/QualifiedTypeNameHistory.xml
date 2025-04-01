@@ -46,6 +46,8 @@
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="java.io.Reader"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-    <fullyQualifiedTypeName name="com.jpaOracleClase.data.Departamento"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+    <fullyQualifiedTypeName name="com.jpaOracleClase.data.Departamento"/>
+    <fullyQualifiedTypeName name="com.jpaOracleClase.dao.DepartamentoRepository"/>
 </qualifiedTypeNameHistroy>
