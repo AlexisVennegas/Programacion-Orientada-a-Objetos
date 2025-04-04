@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{paises.title}"></title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th th:text="#{paises.name}"></th>
+        <th th:text="#{paises.id}"></th>
+        <th th:text="#{paises.region}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="paises : ${paisesData}">
+        <td th:text="${paises.COUNTRY_ID}"></td>
+
+        <td th:text="${paises.COUNTRY_NAME}"></td>
+        <td th:text="${paises.REGION_ID}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

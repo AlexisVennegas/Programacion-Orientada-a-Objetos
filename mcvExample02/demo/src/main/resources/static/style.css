@@ -1,0 +1,116 @@
+/* From Uiverse.io by alexmaracinaru */
+@view-transition {
+  navigation: auto;
+}
+
+.card-container {
+
+    width: 100%:
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-show {
+
+    width: 400px;
+  background: white;
+  padding: .4em;
+  border-radius: 6px;
+  border: none;
+    transition: all 0.5s ease-in-out;
+
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.card {
+
+
+    transition: all 0.5s ease-in-out;
+  width: 190px;
+  background: white;
+  padding: .4em;
+  border-radius: 6px;
+  border: none;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card-image {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 130px;
+  border-radius: 6px 6px 0 0;
+}
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+table {
+    border: 1px solid #ddd;
+    margin: 50px auto;
+}
+table th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+
+    text-align: center;
+}
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+tr:hover {
+background-color: #65a4a7 !important;
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+.img-back {
+width: 10%;
+}
+.text-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-name-show {
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 47px;
+}
+.author {
+  color: gray;
+  font-weight: 400;
+  font-size: 11px;
+  padding-top: 20px;
+    text-align: center;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.name:hover {
+  cursor: pointer;
+}

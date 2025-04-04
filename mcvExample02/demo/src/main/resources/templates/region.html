@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/style.css}">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<table>
+    <header >
+        <a href="/regiones">
+            <img class="img-back" src="https://cdn-icons-png.flaticon.com/128/18991/18991486.png" />
+        </a>
+    </header>
+    <thead>
+    <tr>
+
+        <th th:text="#{region.id}"></th>
+        <th th:text="#{region.name}"></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${region.REGION_ID}"></td>
+        <td th:text="${region.REGION_NAME}"></td>
+    </tr>
+    </tbody>
+</table>
+<div class="card-container">
+    <!-- Itera sobre las regiones -->
+    <div class="card-show">
+
+        <div class="category"></div>
+        <div class="heading">
+            <!-- Muestra el nombre de la región -->
+                <span class="text-name-show" th:text="${region.REGION_NAME}"></span>
+
+            <!-- Puedes incluir más detalles si lo necesitas -->
+            <div class="author">ID:  <span class="name" th:text="${region.REGION_ID}"></span></div>
+
+        </div>
+    </div>
+</body>
+</html>
