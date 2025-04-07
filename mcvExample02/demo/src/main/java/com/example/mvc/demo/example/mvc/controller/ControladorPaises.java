@@ -3,8 +3,7 @@ package com.example.mvc.demo.example.mvc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import com.example.mvc.demo.example.mvc.bussiness.ServicioPais;
 import com.example.mvc.demo.example.mvc.entities.Pais;
 import org.springframework.ui.Model;
@@ -23,6 +22,20 @@ public class ControladorPaises {
         List<Pais> paises = servicio.listPaises();
         model.addAttribute("paisesData", paises);
         return "paises";
+    }
+    // con un id  concreto
+    @GetMapping("/{id}")  // La URL es: /paises/1
+    public String paginaPais(@PathVariable(name="id") String id, Model model) {
+        Pais paisUnique = servicio.conseguirPais(id);  // Busca el país por id
+        model.addAttribute("pais", paisUnique);  // Añade el país al modelo
+        return "pais";
+    }
+
+    @PostMapping
+    public String grabarPais(@ModelAttribute Pais pais, Model model) {
+        pais = servicio.grabarPais(pais);  // Guarda el país
+        model.addAttribute("pais", pais);  // Añade el país al modelo
+        return "pais";  // Devuelve la vista del país
     }
 
 }

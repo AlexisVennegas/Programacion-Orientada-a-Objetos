@@ -8,9 +8,9 @@ public interface ServicioPais {
 
     List<Pais> listPaises() ;
 
-    Pais conseguirPais(Integer idPais) ;
+    Pais conseguirPais(String idPais) ;
 
     Pais grabarPais(Pais pais) ;
 
-    void eliminarPais(Integer idPais) ;
+    void eliminarPais(String idPais) ;
 }

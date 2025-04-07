@@ -24,13 +24,11 @@ public class ServicioPaisImp implements ServicioPais {
             e.printStackTrace();
             throw new RuntimeException("Error al obtener los paises");
         }
-
-
         return paises;
     }
 
     @Override
-    public Pais conseguirPais(Integer idPais) {
+    public Pais conseguirPais(String idPais) {
         Pais pais;
 
          try {
@@ -44,15 +42,34 @@ public class ServicioPaisImp implements ServicioPais {
         return (pais);
     }
 
-    @Override
-    public Pais grabarPais(Pais pais) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+        @Override
+        public Pais grabarPais(Pais pais) {
+            try {
+                pais = repo.save(pais);
+            } catch (Exception e) {
+                e.printStackTrace();
+                throw new RuntimeException("Error al guardar el pais");
+            }
+            return pais;
+        }
+
+
+        public Pais grabarPais(String idPais, String nombre, String idRegion) {
+            Pais pais = new Pais();
+            pais.setCOUNTRY_ID(idPais);
+            pais.setCOUNTRY_NAME(nombre);
+
+            return grabarPais(pais);
+        }
 
     @Override
-    public void eliminarPais(Integer idPais) {
-        // TODO Auto-generated method stub
+    public void eliminarPais(String idPais) {
+      try {
+            repo.deleteById(idPais);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Error al eliminar el pais");
+        }
 
     }
 }

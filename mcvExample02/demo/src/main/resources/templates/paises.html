@@ -3,24 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title th:text="#{paises.title}"></title>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
+<div th:insert="~{/header :: header}"></div>
+<section>
 <table>
     <thead>
     <tr>
         <th th:text="#{paises.name}"></th>
         <th th:text="#{paises.id}"></th>
         <th th:text="#{paises.region}"></th>
+        <th th:text="Visit"></th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="paises : ${paisesData}">
+
         <td th:text="${paises.COUNTRY_ID}"></td>
 
         <td th:text="${paises.COUNTRY_NAME}"></td>
-        <td th:text="${paises.REGION_ID}"></td>
+        <td th:text="${paises.REGION_ID.REGION_NAME}"></td>
+        <td>
+            <a th:href="@{'/paises/'+${paises.COUNTRY_ID}}"> <!-- Link to the region page -->
+                <span class="text-name" th:text="visit"></span>
+            </a>
+        </td>
     </tr>
     </tbody>
 </table>
+    <form th:action="@{/paises}" method="post" th:object="${Pais}">
+        <h1 class="title-add" th:text="#{paises.add}"></h1>
+        <select id="REGION_ID" name="REGION_ID">
+            <option selected disabled>Seleccione una región</option>
+
+            </option>
+            <option value="1">
+                europa
+            </option>
+            <option value="2" >
+                america
+            </option>
+            <option value="3">
+                asia
+            </option>
+            <option value="4">
+                africa
+            </option>
+        </select>
+        <input type="text" id="COUNTRY_NAME" name="COUNTRY_NAME" placeholder="Nombre del país" />
+
+        <input type="text" id="COUNTRY_ID" name="COUNTRY_ID" placeholder="ID del país" />
+
+
+
+        <input type="submit" value="Submit" />
+    </form>
+
+</section>
 </body>
 </html>

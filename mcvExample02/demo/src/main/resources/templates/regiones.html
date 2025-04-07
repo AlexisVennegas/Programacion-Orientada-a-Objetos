@@ -6,38 +6,34 @@
     <title th:text="#{region.title}"></title>
 </head>
 <body>
+<div th:insert="~{/header :: header}"></div>
 <table>
     <thead>
     <tr>
         <th th:text="#{region.id}"></th>
         <th th:text="#{region.name}"></th>
+        <th >Link</th>
     </tr>
     </thead>
     <tbody>
+
+
+
     <tr th:each="region : ${regiones}">
-        <td th:text="${region.REGION_ID}"></td>
-
+            <td th:text="${region.REGION_ID}"></td>
             <td th:text="${region.REGION_NAME}"></td>
-
+            <td>
+                <a th:href="@{'/regiones/'+${region.REGION_ID}}">
+                    <span class="text-name" th:text="visit"></span>
+                </a>
+            </td>
     </tr>
+
     </tbody>
 </table>
 
-<div class="card-container">
-    <!-- Itera sobre las regiones -->
-    <div th:each="region : ${regiones}" class="card">
+<form>
 
-        <div class="category"></div>
-        <div class="heading">
-            <!-- Muestra el nombre de la región -->
-            <a th:href="@{'/regiones/'+${region.REGION_ID}}">
-                <span class="text-name" th:text="${region.REGION_NAME}"></span>
-            </a>
-            <!-- Puedes incluir más detalles si lo necesitas -->
-            <div class="author">ID:  <span class="name" th:text="${region.REGION_ID}"></span></div>
-
-        </div>
-    </div>
-</div>
+</form>
 </body>
 </html>

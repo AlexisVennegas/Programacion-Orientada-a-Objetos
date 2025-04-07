@@ -10,22 +10,24 @@ public class Pais {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     @Column(name = "COUNTRY_ID")
-    public Integer COUNTRY_ID;
+    private String COUNTRY_ID;
 
-    public String COUNTRY_NAME;
+    @Column(name = "COUNTRY_NAME")
+    private String COUNTRY_NAME;
 
-    @Column(name = "REGION_ID")
-    public String REGION_ID;
+    @ManyToOne
+    @JoinColumn(name = "REGION_ID")
+    private Region REGION_ID;
 
     public Pais(){
 
     }
 
-    public Integer getCOUNTRY_ID() {
+    public String getCOUNTRY_ID() {
         return COUNTRY_ID;
     }
 
-    public void setCOUNTRY_ID(Integer COUNTRY_ID) {
+    public void setCOUNTRY_ID(String COUNTRY_ID) {
         this.COUNTRY_ID = COUNTRY_ID;
     }
 
@@ -37,11 +39,11 @@ public class Pais {
         this.COUNTRY_NAME = COUNTRY_NAME;
     }
 
-    public String getREGION_ID() {
+    public Region getREGION_ID() {
         return REGION_ID;
     }
 
-    public void setREGION_ID(String REGION_ID) {
+    public void setREGION_ID(Region REGION_ID) {
         this.REGION_ID = REGION_ID;
     }
 

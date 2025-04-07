@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+
+</head>
+<body>
+<div th:insert="~{/header :: header}"></div>
+    <table>
+        <thead>
+            <tr>
+                <th th:text="Back">
+
+                </th>
+                <th th:text="#{paises.name}"></th>
+                <th th:text="#{paises.id}"></th>
+                <th th:text="#{paises.region}"></th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+                <td>
+                    <a href="/paises">
+                        <img class="img-back" src="https://cdn-icons-png.flaticon.com/128/18991/18991486.png" />
+                    </a>
+                </td>
+                <td th:text="${pais.COUNTRY_ID}"></td>
+                <td th:text="${pais.COUNTRY_NAME}"></td>
+                <td th:text="${pais.REGION_ID.REGION_NAME}"></td>
+            </tr>
+
+
+
+        </tbody>
+
+    </table>
+
+       <form></form>
+
+</body>
+</html>

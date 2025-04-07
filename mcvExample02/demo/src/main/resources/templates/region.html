@@ -5,12 +5,9 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<div th:insert="~{/header :: header}"></div>
 <table>
-    <header >
-        <a href="/regiones">
-            <img class="img-back" src="https://cdn-icons-png.flaticon.com/128/18991/18991486.png" />
-        </a>
-    </header>
+
     <thead>
     <tr>
 
@@ -21,7 +18,11 @@
     </thead>
     <tbody>
     <tr>
-        <td th:text="${region.REGION_ID}"></td>
+        <td>
+            <a href="/regiones">
+                <img class="img-back" src="https://cdn-icons-png.flaticon.com/128/18991/18991486.png" />
+            </a>
+        </td>
         <td th:text="${region.REGION_NAME}"></td>
     </tr>
     </tbody>
