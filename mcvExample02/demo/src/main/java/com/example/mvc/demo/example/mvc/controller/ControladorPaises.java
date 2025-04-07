@@ -32,10 +32,11 @@ public class ControladorPaises {
     }
 
     @PostMapping
-    public String grabarPais(@ModelAttribute Pais pais, Model model) {
-        pais = servicio.grabarPais(pais);  // Guarda el país
+    public String crearPais(@RequestParam(name="COUNTRY_ID") String id, @RequestParam(name="COUNTRY_NAME") String nombrePais, @RequestParam(name="REGION_ID") Integer idRegion, Model model) {
+
+        Pais pais = servicio.grabarPais(id, nombrePais, idRegion);
         model.addAttribute("pais", pais);  // Añade el país al modelo
-        return "pais";  // Devuelve la vista del país
+        return "pais";  // Redirige a la lista de países
     }
 
 }

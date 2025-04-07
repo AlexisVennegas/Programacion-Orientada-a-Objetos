@@ -10,7 +10,7 @@ public interface ServicioPais {
 
     Pais conseguirPais(String idPais) ;
 
-    Pais grabarPais(Pais pais) ;
+    Pais grabarPais(String idPais, String nombre, Integer idRegion) ;
 
     void eliminarPais(String idPais) ;
 }

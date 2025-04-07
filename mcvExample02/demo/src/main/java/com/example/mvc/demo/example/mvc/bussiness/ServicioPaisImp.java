@@ -2,6 +2,7 @@ package com.example.mvc.demo.example.mvc.bussiness;
 
 import java.util.List;
 
+import com.example.mvc.demo.example.mvc.entities.Region;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.example.mvc.demo.example.mvc.entities.Pais;
 import com.example.mvc.demo.example.mvc.repositories.PaisRepository;
@@ -42,24 +43,17 @@ public class ServicioPaisImp implements ServicioPais {
         return (pais);
     }
 
-        @Override
-        public Pais grabarPais(Pais pais) {
-            try {
-                pais = repo.save(pais);
-            } catch (Exception e) {
-                e.printStackTrace();
-                throw new RuntimeException("Error al guardar el pais");
-            }
-            return pais;
-        }
 
 
-        public Pais grabarPais(String idPais, String nombre, String idRegion) {
+        public Pais grabarPais(String idPais, String nombre, Integer idRegion) {
             Pais pais = new Pais();
+            Region region = new Region();
+
             pais.setCOUNTRY_ID(idPais);
             pais.setCOUNTRY_NAME(nombre);
-
-            return grabarPais(pais);
+            region.setREGION_ID(idRegion);
+            pais.setREGION_ID(region);
+            return repo.save(pais);
         }
 
     @Override
