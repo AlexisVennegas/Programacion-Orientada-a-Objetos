@@ -39,7 +39,15 @@
             </tr>
         </tbody>
       </table>
-
+      <form th:action="@{/direcciones/modificar}" method="post">
+        <h1 class="title-add" th:text="#{direcciones.modificar}"></h1>
+        <input th:value="${direcciondata.id}" type="text" id="id" name="id" placeholder="ID de la dirección" />
+        <input th:value="${direcciondata.direccion}" type="text" id="direccion" name="direccion" placeholder="Dirección" />
+        <input th:value="${direcciondata.codigoPostal}" type="text" id="codigoPostal" name="codigoPostal" placeholder="Código Postal" />
+        <input th:value="${direcciondata.ciudad}" type="text" id="ciudad" name="ciudad" placeholder="Ciudad" />
+        <input th:value="${direcciondata.provincia}" type="text" id="provincia" name="provincia" placeholder="Provincia" />
+        <input th:value="${direcciondata.paisId}" type="text" id="paisId" name="paisId" placeholder="ID del país" />
+        <input type="submit" value="Submit"/>
   </section>
 </body>
 </html>
