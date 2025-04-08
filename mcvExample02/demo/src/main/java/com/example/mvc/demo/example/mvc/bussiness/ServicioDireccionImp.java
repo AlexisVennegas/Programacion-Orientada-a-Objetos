@@ -44,18 +44,31 @@ public class ServicioDireccionImp implements ServicioDireccion{
     }
 
     @Override
-    public Direccion grabarDireccion(Integer idDireccion, String nombre, Integer idRegion) {
-        return null;
+    public Direccion grabarDireccion(Integer id, String direccionAdress, String codigoPostal, String ciudad, String provincia, String paisId) {
+
+
+        Direccion direccion = new Direccion();
+
+        direccion.setId(id);
+        direccion.setDireccion(direccionAdress);
+        direccion.setCodigoPostal(codigoPostal);
+        direccion.setCiudad(ciudad);
+        direccion.setProvincia(provincia);
+        direccion.setPaisId(paisId);
+
+        return repoDireccion.save(direccion);
+
     }
 
     @Override
     public Direccion grabarDireccion(Direccion direccion) {
-        return null;
+
+        return repoDireccion.save(direccion);
     }
 
     @Override
     public void eliminarDireccion(Integer idDireccion) {
-
+        repoDireccion.deleteById(idDireccion);
     }
 
 

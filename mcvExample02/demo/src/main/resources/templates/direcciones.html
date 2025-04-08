@@ -40,12 +40,14 @@
             </tr>
         </tbody>
     </table>
-    <form >
+    <form th:action="@{/direcciones}" method="post">
+
+
 
       <h1 class="title-add" th:text="#{direcciones.add}"></h1>
 
         <input type="text" id="id" name="id" placeholder="ID" />
-        <input type="text" id="direccion" name="direccion" placeholder="Dirección" />
+        <input type="text" id="direccion" name="STREET_ADDRESS" placeholder="Dirección" />
         <input type="text" id="codigoPostal" name="codigoPostal" placeholder="Código Postal" />
         <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" />
         <input type="text" id="provincia" name="provincia" placeholder="Provincia" />

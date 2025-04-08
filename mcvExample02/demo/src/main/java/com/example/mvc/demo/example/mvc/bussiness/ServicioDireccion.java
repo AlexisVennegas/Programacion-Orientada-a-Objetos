@@ -10,7 +10,7 @@ public interface ServicioDireccion {
 
     Direccion conseguirDireccion(Integer idDireccion) ;
 
-    Direccion grabarDireccion(Integer idDireccion, String nombre, Integer idRegion) ;
+    Direccion grabarDireccion(Integer id, String direccionAdress, String codigoPostal, String ciudad, String provincia, String paisId) ;
 
     Direccion grabarDireccion(Direccion direccion);
 

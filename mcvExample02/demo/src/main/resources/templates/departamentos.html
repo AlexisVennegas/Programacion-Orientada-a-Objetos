@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div th:insert="~{/header :: header}"></div>
+<section>
+
+    <table>
+        <thead>
+
+        <tr>
+
+            <th th:text="#{departamentos.id}"></th>
+            <th th:text="#{departamentos.nombre}"></th>
+            <th th:text="#{departamentos.idJefe}"></th>
+            <th th:text="#{departamentos.idUbicacion}"></th>
+            <th th:text="#{departamentos.visitar}"></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="departamentos : ${departamentosData}">
+            <td th:text="${departamentos.id}"></td>
+            <td th:text="${departamentos.nombre}"></td>
+            <td th:text="${departamentos.idJefe}"></td>
+            <td th:text="${departamentos.idUbicacion}"></td>
+
+
+            <td>
+                <a th:href="@{/departamentos/{id}(id=${departamentos.id})}">
+                    <span class="text-name" th:text="#{departamentos.visitar}"></span>
+                </a>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</section>
+</body>
+</html>

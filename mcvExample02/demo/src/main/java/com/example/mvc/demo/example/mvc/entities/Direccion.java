@@ -15,7 +15,7 @@ public class Direccion {
     private Integer id;
 
     @Column(name = "STREET_ADDRESS")
-    private String direccion;
+    private String STREET_ADDRESS;
 
     @Column(name = "POSTAL_CODE")
     private String codigoPostal;
@@ -39,11 +39,11 @@ public class Direccion {
     }
 
     public String getDireccion() {
-        return direccion;
+        return STREET_ADDRESS;
     }
 
     public void setDireccion(String direccion) {
-        this.direccion = direccion;
+        this.STREET_ADDRESS = direccion;
     }
 
     public String getCodigoPostal() {
@@ -82,7 +82,7 @@ public class Direccion {
     public String toString() {
         return "Direccion{" +
                 "id=" + id +
-                ", direccion='" + direccion + '\'' +
+                ", direccion='" + STREET_ADDRESS + '\'' +
                 ", codigoPostal='" + codigoPostal + '\'' +
                 ", ciudad='" + ciudad + '\'' +
                 ", provincia='" + provincia + '\'' +
