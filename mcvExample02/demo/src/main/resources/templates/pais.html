@@ -9,15 +9,15 @@
 </head>
 <body>
 <div th:insert="~{/header :: header}"></div>
+<section>
     <table>
         <thead>
             <tr>
-                <th th:text="Back">
-
-                </th>
-                <th th:text="#{paises.name}"></th>
+                <th th:text="Back"></th>
                 <th th:text="#{paises.id}"></th>
+                <th th:text="#{paises.name}"></th>
                 <th th:text="#{paises.region}"></th>
+                <th th:text="#{paises.delete}"></th>
             </tr>
          </thead>
          <tbody>
@@ -29,7 +29,13 @@
                 </td>
                 <td th:text="${pais.COUNTRY_ID}"></td>
                 <td th:text="${pais.COUNTRY_NAME}"></td>
-                <td th:text="${pais.REGION_ID.REGION_NAME}"></td>
+                <td th:text="${pais.region.REGION_NAME}"></td>
+                <form th:action="@{/paises/eliminar}" method="post">
+                    <td th:text="#{paises.x}" >
+                        <input type="hidden" th:value="${pais.COUNTRY_ID}" name="COUNTRY_ID" />
+                        <input type="submit" value="X" />
+                    </td>
+                </form>
             </tr>
 
 
@@ -38,7 +44,20 @@
 
     </table>
 
-       <form></form>
+    <form th:action="@{/paises/modificar}" method="post">
+
+        <h1 class="title-add" th:text="#{paises.modificar}"></h1>
+        <select id="REGION_ID" name="region">
+            <option  th:selected="${pais.region} == ${region}"  th:each="region : ${regionesData}" th:value="${region.REGION_ID}" th:text="${region.REGION_NAME}"></option>
+        </select>
+        <input th:value="${pais.COUNTRY_NAME}" type="text" id="COUNTRY_NAME" name="COUNTRY_NAME" placeholder="Nombre del país" />
+
+        <input th:value="${pais.COUNTRY_ID}" type="text" id="COUNTRY_ID" name="COUNTRY_ID" placeholder="ID del país" />
+
+        <input type="submit" value="Submit" />
+
+    </form>
+</section>
 
 </body>
 </html>

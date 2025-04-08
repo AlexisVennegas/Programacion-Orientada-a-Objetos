@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" th:href="@{/style.css}">
+
+</head>
+<body>
+<div th:insert="~{/header :: header}"></div>
+  <section>
+      <table>
+        <thead>
+        <tr>
+          <th th:text="Back"></th>
+
+          <th th:text="#{direcciones.id}"></th>
+          <th th:text="#{direcciones.streetAddress}"></th>
+          <th th:text="#{direcciones.postalCode}"></th>
+          <th th:text="#{direcciones.city}"></th>
+          <th th:text="#{direcciones.stateProvince}"></th>
+          <th th:text="#{direcciones.countryId}"></th>
+          <th th:text="#{direcciones.visitar}"></th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>
+                <a href="/direcciones">
+                  <img class="img-back" src="https://cdn-icons-png.flaticon.com/128/18991/18991486.png" />
+                </a>
+              </td>
+              <td th:text="${direcciondata.id}"></td>
+              <td th:text="${direcciondata.direccion}"></td>
+              <td th:text="${direcciondata.codigoPostal}"></td>
+              <td th:text="${direcciondata.ciudad}"></td>
+              <td th:text="${direcciondata.provincia}"></td>
+              <td th:text="${direcciondata.paisId}"></td>
+            </tr>
+        </tbody>
+      </table>
+
+  </section>
+</body>
+</html>

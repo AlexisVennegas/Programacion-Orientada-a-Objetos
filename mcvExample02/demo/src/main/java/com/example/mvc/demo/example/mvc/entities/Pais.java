@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 public class Pais {
 
     @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     @Column(name = "COUNTRY_ID")
     private String COUNTRY_ID;
 
@@ -17,7 +17,7 @@ public class Pais {
 
     @ManyToOne
     @JoinColumn(name = "REGION_ID")
-    private Region REGION_ID;
+    private Region region;
 
     public Pais(){
 
@@ -39,20 +39,20 @@ public class Pais {
         this.COUNTRY_NAME = COUNTRY_NAME;
     }
 
-    public Region getREGION_ID() {
-        return REGION_ID;
+    public Region getRegion() {
+        return region;
     }
 
-    public void setREGION_ID(Region REGION_ID) {
-        this.REGION_ID = REGION_ID;
+    public void setRegion(Region region) {
+        this.region = region;
     }
 
     @Override
     public String toString() {
         return "Pais{" +
-                "COUNTRY_ID=" + COUNTRY_ID +
+                "COUNTRY_ID='" + COUNTRY_ID + '\'' +
                 ", COUNTRY_NAME='" + COUNTRY_NAME + '\'' +
-                ", REGION_ID='" + REGION_ID + '\'' +
+                ", region=" + region +
                 '}';
     }
 }

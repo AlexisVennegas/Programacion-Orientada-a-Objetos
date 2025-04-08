@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div th:insert="~{/header :: header}"></div>
+  <section>
+    <table>
+        <thead>
+
+            <tr>
+
+                <th th:text="#{direcciones.id}"></th>
+                <th th:text="#{direcciones.streetAddress}"></th>
+                <th th:text="#{direcciones.postalCode}"></th>
+                <th th:text="#{direcciones.city}"></th>
+                <th th:text="#{direcciones.stateProvince}"></th>
+                <th th:text="#{direcciones.countryId}"></th>
+                <th th:text="#{direcciones.visitar}"></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr th:each="direccion : ${direcciones}">
+                <td th:text="${direccion.id}"></td>
+                <td th:text="${direccion.direccion}"></td>
+                <td th:text="${direccion.codigoPostal}"></td>
+                <td th:text="${direccion.ciudad}"></td>
+                <td th:text="${direccion.provincia}"></td>
+                <td th:text="${direccion.paisId}"></td>
+              <td>
+               <a th:href="@{'/direcciones/'+${direccion.id}}">
+                  <span class="text-name" th:text="#{direcciones.visitar}"></span>
+                </a>
+              </td>
+
+            </tr>
+        </tbody>
+    </table>
+    <form >
+
+      <h1 class="title-add" th:text="#{direcciones.add}"></h1>
+
+        <input type="text" id="id" name="id" placeholder="ID" />
+        <input type="text" id="direccion" name="direccion" placeholder="Dirección" />
+        <input type="text" id="codigoPostal" name="codigoPostal" placeholder="Código Postal" />
+        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" />
+        <input type="text" id="provincia" name="provincia" placeholder="Provincia" />
+        <input type="text" id="paisId" name="paisId" placeholder="ID del país" />
+        <input type="submit" value="Submit" />
+
+
+
+
+    </form>
+
+  </section>
+</body>
+</html>

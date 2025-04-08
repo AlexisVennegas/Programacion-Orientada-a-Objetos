@@ -14,6 +14,9 @@ public class ServicioPaisImp implements ServicioPais {
     @Autowired
     PaisRepository repo;
 
+    @Autowired
+    ServicioRegion regionRepo;
+
     @Override
     public List<Pais> listPaises() {
 
@@ -44,17 +47,40 @@ public class ServicioPaisImp implements ServicioPais {
     }
 
 
+    @Override
+    public Pais grabarPais(String idPais, String nombre, Integer idRegion) {
+        try {
+            // Verificar si el país ya existe
+            if (repo.existsById(idPais)) {
+                throw new RuntimeException("El ID del país ya existe: " + idPais);
+            }
 
-        public Pais grabarPais(String idPais, String nombre, Integer idRegion) {
+
+
+            // Crear el objeto Pais con la región obtenida
             Pais pais = new Pais();
-            Region region = new Region();
-
             pais.setCOUNTRY_ID(idPais);
             pais.setCOUNTRY_NAME(nombre);
+            Region region = new Region();
             region.setREGION_ID(idRegion);
-            pais.setREGION_ID(region);
+            pais.setRegion(region);
+
+            // Guardar en la base de datos
             return repo.save(pais);
+
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Error al guardar el país: " + e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Error al guardar el país: " + e.getMessage());
         }
+    }
+
+    @Override
+    public Pais grabarPais(Pais pais) {
+        return repo.save(pais);
+    }
 
     @Override
     public void eliminarPais(String idPais) {

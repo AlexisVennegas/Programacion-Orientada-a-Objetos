@@ -9,7 +9,7 @@ import jakarta.persistence.*;
 public class Region {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Generación automática del ID
+    //@GeneratedValue(strategy = GenerationType.IDENTITY) // Generación automática del ID
     @Column(name = "REGION_ID") // Opcional, define el nombre de la columna en la BD
     public Integer REGION_ID;
 
