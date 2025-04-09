@@ -47,16 +47,16 @@ public class ServicioDireccionImp implements ServicioDireccion{
     public Direccion grabarDireccion(Integer id, String direccionA, String codigoPostal, String ciudad, String provincia, String paisId) {
 
 
-        Direccion direccion = new Direccion();
+        Direccion direccionAux = new Direccion();
 
-        direccion.setId(id);
-        direccion.setDireccion(direccionA);
-        direccion.setCodigoPostal(codigoPostal);
-        direccion.setCiudad(ciudad);
-        direccion.setProvincia(provincia);
-        direccion.setPaisId(paisId);
+        direccionAux.setId(id);
+        direccionAux.setDireccion(direccionA);
+        direccionAux.setCodigoPostal(codigoPostal);
+        direccionAux.setCiudad(ciudad);
+        direccionAux.setProvincia(provincia);
+        direccionAux.setPaisId(paisId);
 
-        return repoDireccion.save(direccion);
+        return repoDireccion.save(direccionAux);
 
     }
 

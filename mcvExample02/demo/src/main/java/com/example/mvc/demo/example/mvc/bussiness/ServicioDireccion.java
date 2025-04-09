@@ -5,7 +5,6 @@ import com.example.mvc.demo.example.mvc.entities.Direccion;
 
 public interface ServicioDireccion {
 
-
     List<Direccion> listDirecciones() ;
 
     Direccion conseguirDireccion(Integer idDireccion) ;

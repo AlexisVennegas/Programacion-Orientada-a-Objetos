@@ -2,6 +2,7 @@ package com.example.mvc.demo.example.mvc.bussiness;
 
 import com.example.mvc.demo.example.mvc.entities.Empleados;
 import java.util.List;
+
 public interface ServicioEmpleados {
 
     List<Empleados> listEmpleados();
