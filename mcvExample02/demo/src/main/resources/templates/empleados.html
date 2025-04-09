@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+
+</head>
+<body>
+<div th:insert="~{/header :: header}"></div>
+<section>
+
+    <table>
+        <thead>
+
+        <tr>
+
+            <th th:text="#{empleados.id}"></th>
+            <th th:text="#{empleados.nombre}"></th>
+            <th th:text="#{empleados.apellido}"></th>
+            <th th:text="#{empleados.correo}"></th>
+            <th th:text="#{empleados.telefono}"></th>
+            <th th:text="#{empleados.fechaContratacion}"></th>
+            <th th:text="#{empleados.idTrabajo}"></th>
+            <th th:text="#{empleados.salario}"></th>
+            <th th:text="#{empleados.comision}"></th>
+            <th th:text="#{empleados.idDepartamento}"></th>
+            <th th:text="#{empleados.idJefe}"></th>
+            <th th:text="#{empleados.visitar}"></th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="empleados : ${empleadosData}">
+            <td th:text="${empleados.id}"></td>
+            <td th:text="${empleados.nombre}"></td>
+            <td th:text="${empleados.apellido}"></td>
+            <td th:text="${empleados.email}"></td>
+            <td th:text="${empleados.telefono}"></td>
+            <td th:text="${empleados.fechaContratacion}"></td>
+            <td th:text="${empleados.idTrabajo}"></td>
+            <td th:text="${empleados.salario}"></td>
+            <td th:text="${empleados.comision}"></td>
+            <td th:text="${empleados.idJefe}"></td>
+            <td th:text="${empleados.idDepartamento}"></td>
+            <td>
+                <a th:href="@{'/empleados/'+${empleados.id}}">
+                    <span class="text-name" th:text="#{departamentos.visitar}"></span>
+                </a>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+    <form th:action="@{/empleados}" method="post">
+        <h1 class="title-add" th:text="#{empleados.add}"></h1>
+        <input  type="text" id="id" name="id" placeholder="ID de la dirección" />
+        <input type="text" id="nombre" name="nombre" placeholder="nombre" />
+        <input  type="text" id="apellido" name="apellido" placeholder="apellido" />
+        <input  type="email" id="email" name="email" placeholder="email" />
+        <input  type="text" id="telefono" name="telefono" placeholder="telefono" />
+        <input  type="date" id="fechaContratacion" name="fechaContratacion" placeholder="fecha Contratacion" />
+        <input  type="text" id="idTrabajo" name="idTrabajo" placeholder="ID del trabajo" />
+        <input  type="text" id="salario" name="salario" placeholder="Salario" />
+        <input  type="text" id="comision" name="comision" placeholder="Comisión" />
+        <input  type="text" id="idJefe" name="idJefe" placeholder="ID del jefe" />
+        <input  type="text" id="idDepartamento" name="idDepartamento" placeholder="ID del departamento" />
+
+        <input type="submit" value="Submit" />
+    </form>
+</section>
+</body>
+</html>

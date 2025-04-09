@@ -39,7 +39,15 @@
         </tr>
         </tbody>
     </table>
+    <form th:action="@{/departamentos}" method="post">
+        <h1 class="title-add" th:text="#{direcciones.add}"></h1>
+        <input type="text" id="id" name="id" placeholder="ID" />
+        <input type="text" id="nombre" name="nombre" placeholder="nombre" />
+        <input type="text" id="idJefe" name="idJefe" placeholder="Id jefe" />
+        <input type="text" id="idUbicacion" name="idUbicacion" placeholder="Id Ubicacion" />
 
+        <input type="submit" value="Submit" />
+    </form>
 </section>
 </body>
 </html>

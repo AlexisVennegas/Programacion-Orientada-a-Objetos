@@ -44,13 +44,13 @@ public class ServicioDireccionImp implements ServicioDireccion{
     }
 
     @Override
-    public Direccion grabarDireccion(Integer id, String direccionAdress, String codigoPostal, String ciudad, String provincia, String paisId) {
+    public Direccion grabarDireccion(Integer id, String direccionA, String codigoPostal, String ciudad, String provincia, String paisId) {
 
 
         Direccion direccion = new Direccion();
 
         direccion.setId(id);
-        direccion.setDireccion(direccionAdress);
+        direccion.setDireccion(direccionA);
         direccion.setCodigoPostal(codigoPostal);
         direccion.setCiudad(ciudad);
         direccion.setProvincia(provincia);

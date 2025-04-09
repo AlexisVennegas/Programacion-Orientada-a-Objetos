@@ -26,17 +26,36 @@ public class ServicioDepartamentosImp implements ServicioDepartamentos{
 
     @Override
     public Departamentos conseguirDepartamento(Integer idDepartamento) {
-        return null;
+
+        Departamentos departamentoUnique;
+
+        try {
+            departamentoUnique = repoDepartamento.findById(idDepartamento).orElse(null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Error al obtener el departamento");
+        }
+
+        return departamentoUnique;
+
     }
 
     @Override
     public Departamentos grabarDepartamento(Integer id, String nombre, Integer idJefe, Integer idUbicacion) {
-        return null;
+
+        Departamentos departamento = new Departamentos();
+        departamento.setId(id);
+        departamento.setNombre(nombre);
+        departamento.setIdJefe(idJefe);
+        departamento.setIdUbicacion(idUbicacion);
+
+        return repoDepartamento.save(departamento);
     }
 
     @Override
     public Departamentos grabarDepartamento(Departamentos departamento) {
-        return null;
+
+        return repoDepartamento.save(departamento);
     }
 
     @Override

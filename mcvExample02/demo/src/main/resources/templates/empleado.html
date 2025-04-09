@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" th:href="@{/style.css}">
+
+</head>
+<body>
+<div th:insert="~{/header :: header}"></div>
+<section>
+  <table>
+    <thead>
+    <tr>
+
+      <th th:text="back"></th>
+      <th th:text="#{empleados.id}"></th>
+      <th th:text="#{empleados.nombre}"></th>
+      <th th:text="#{empleados.apellido}"></th>
+      <th th:text="#{empleados.correo}"></th>
+      <th th:text="#{empleados.telefono}"></th>
+      <th th:text="#{empleados.fechaContratacion}"></th>
+      <th th:text="#{empleados.idTrabajo}"></th>
+      <th th:text="#{empleados.salario}"></th>
+      <th th:text="#{empleados.comision}"></th>
+      <th th:text="#{empleados.idDepartamento}"></th>
+      <th th:text="#{empleados.idJefe}"></th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        <a href="/empleados">
+          <img class="img-back" src="https://cdn-icons-png.flaticon.com/128/18991/18991486.png" />
+        </a>
+      </td>
+
+      <td th:text="${empleadoData.id}"></td>
+      <td th:text="${empleadoData.nombre}"></td>
+      <td th:text="${empleadoData.apellido}"></td>
+      <td th:text="${empleadoData.email}"></td>
+      <td th:text="${empleadoData.telefono}"></td>
+      <td th:text="${empleadoData.fechaContratacion}"></td>
+      <td th:text="${empleadoData.idTrabajo}"></td>
+      <td th:text="${empleadoData.salario}"></td>
+      <td th:text="${empleadoData.comision}"></td>
+      <td th:text="${empleadoData.idJefe}"></td>
+      <td th:text="${empleadoData.idDepartamento}"></td>
+    </tr>
+    </tbody>
+  </table>
+  <form th:action="@{/direcciones/modificar}" method="post">
+    <h1 class="title-add" th:text="#{direcciones.modificar}"></h1>
+    <input th:value="${empleadoData.id}" type="text" id="id" name="id" placeholder="ID de la dirección" />
+    <input th:value="${empleadoData.nombre}" type="text" id="direccionA" name="direccionA" placeholder="Dirección" />
+    <input th:value="${empleadoData.apellido}" type="text" id="codigoPostal" name="codigoPostal" placeholder="Código Postal" />
+    <input th:value="${empleadoData.email}" type="text" id="ciudad" name="ciudad" placeholder="Ciudad" />
+    <input th:value="${empleadoData.telefono}" type="text" id="provincia" name="provincia" placeholder="Provincia" />
+    <input th:value="${empleadoData.fechaContratacion}" type="text" id="paisId" name="paisId" placeholder="ID del país" />
+    <input th:value="${empleadoData.idTrabajo}" type="text" id="idTrabajo" name="idTrabajo" placeholder="ID del trabajo" />
+    <input th:value="${empleadoData.salario}" type="text" id="salario" name="salario" placeholder="Salario" />
+    <input th:value="${empleadoData.comision}" type="text" id="comision" name="comision" placeholder="Comisión" />
+    <input th:value="${empleadoData.idJefe}" type="text" id="idJefe" name="idJefe" placeholder="ID del jefe" />
+    <input th:value="${empleadoData.idDepartamento}" type="text" id="idDepartamento" name="idDepartamento" placeholder="ID del departamento" />
+    <input type="submit" value="Submit"/>
+  </form>
+
+</section>
+</body>
+</html>

@@ -34,7 +34,7 @@ public class ControladorDirecciones {
 
     @PostMapping
     public String crearDireccion(@ModelAttribute Direccion direccion, Model model) {
-        direccion = servicio.grabarDireccion(direccion.getId(), direccion.getDireccion(), direccion.getCodigoPostal(), direccion.getCiudad(), direccion.getProvincia(), direccion.getPaisId());  // Graba la dirección
+        direccion = servicio.grabarDireccion(direccion.getId(), direccion.getDireccionA(), direccion.getCodigoPostal(), direccion.getCiudad(), direccion.getProvincia(), direccion.getPaisId());  // Graba la dirección
 
 
         model.addAttribute("direcciondata", direccion);  // Añade la dirección al modelo

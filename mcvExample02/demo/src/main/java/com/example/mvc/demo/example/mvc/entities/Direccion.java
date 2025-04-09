@@ -10,12 +10,14 @@ import jakarta.persistence.Table;
 public class Direccion {
 
 
+    public Direccion() {
+    }
     @Id
     @Column(name = "LOCATION_ID")
     private Integer id;
 
     @Column(name = "STREET_ADDRESS")
-    private String STREET_ADDRESS;
+    public String direccionA;
 
     @Column(name = "POSTAL_CODE")
     private String codigoPostal;
@@ -38,12 +40,12 @@ public class Direccion {
         this.id = id;
     }
 
-    public String getDireccion() {
-        return STREET_ADDRESS;
+    public String getDireccionA() {
+        return direccionA;
     }
 
     public void setDireccion(String direccion) {
-        this.STREET_ADDRESS = direccion;
+        this.direccionA = direccion;
     }
 
     public String getCodigoPostal() {
@@ -82,7 +84,7 @@ public class Direccion {
     public String toString() {
         return "Direccion{" +
                 "id=" + id +
-                ", direccion='" + STREET_ADDRESS + '\'' +
+                ", direccion='" + direccionA + '\'' +
                 ", codigoPostal='" + codigoPostal + '\'' +
                 ", ciudad='" + ciudad + '\'' +
                 ", provincia='" + provincia + '\'' +

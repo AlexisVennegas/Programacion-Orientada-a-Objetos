@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+
+</head>
+<body>
+<div th:insert="~{/header :: header}"></div>
+<section>
+    <table>
+        <thead>
+        <tr>
+            <th th:text="Back"></th>
+
+            <th th:text="#{departamentos.id}"></th>
+            <th th:text="#{departamentos.nombre}"></th>
+            <th th:text="#{departamentos.idJefe}"></th>
+            <th th:text="#{departamentos.idUbicacion}"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <a href="/departamentos">
+                    <img class="img-back" src="https://cdn-icons-png.flaticon.com/128/18991/18991486.png" />
+                </a>
+            </td>
+            <td th:text="${departamento.id}"></td>
+            <td th:text="${departamento.nombre}"></td>
+            <td th:text="${departamento.idJefe}"></td>
+            <td th:text="${departamento.idUbicacion}"></td>
+
+        </tr>
+        </tbody>
+    </table>
+    <form th:action="@{/departamentos/modificar}" method="post">
+        <h1 class="title-add" th:text="#{departamento.modificar}"></h1>
+        <input th:value="${departamento.id}" type="text" id="id" name="id" placeholder="ID" />
+        <input th:value="${departamento.nombre}" type="text" id="nombre" name="nombre" placeholder="Nombre" />
+        <input th:value="${departamento.idJefe}" type="text" id="idJefe" name="idJefe" placeholder="Encagardo" />
+        <input th:value="${departamento.idUbicacion}" type="text" id="idUbicacion" name="idUbicacion" placeholder="Ubicacion" />
+        <input type="submit" value="Submit"/>
+    </form>
+</section>
+</body>
+</html>
