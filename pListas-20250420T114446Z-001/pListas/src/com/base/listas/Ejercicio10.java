@@ -32,7 +32,7 @@ public class Ejercicio10 {
 		} else {
 			System.out.println("El objeto Casa no se encuentra en la lista.");
 		}
-		
+
 
 	}
 	
