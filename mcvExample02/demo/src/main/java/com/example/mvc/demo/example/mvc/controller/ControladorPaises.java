@@ -1,15 +1,19 @@
 package com.example.mvc.demo.example.mvc.controller;
 
 
-import oracle.jdbc.proxy.annotation.Post;
+import com.example.mvc.demo.example.mvc.bussiness.ServicioPais;
+import com.example.mvc.demo.example.mvc.bussiness.ServicioRegion;
+import com.example.mvc.demo.example.mvc.entities.Pais;
+import com.example.mvc.demo.example.mvc.entities.Region;
+import jakarta.validation.Valid;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import com.example.mvc.demo.example.mvc.bussiness.*;
-import com.example.mvc.demo.example.mvc.entities.*;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
-import org.slf4j.Logger;
 
 @Controller
 @RequestMapping("/paises")
@@ -48,23 +52,47 @@ public class ControladorPaises {
     }
 
     @PostMapping
-    public String crearPais(@ModelAttribute Pais pais, Model model) {
+    public String crearPais(@Valid @ModelAttribute Pais pais, BindingResult result, Model model) {
         logger.info("[ControladorPaises] - crearPais");
         logger.debug("[pais:"+pais.toString()+"]");
-        pais = servicio.grabarPais(pais.getCOUNTRY_ID(), pais.getCOUNTRY_NAME(),  pais.getRegion().getREGION_ID());  // Graba el país
-        model.addAttribute("pais", pais);  // Añade el país al modelo
-        return "pais"; // Devuelve la vista
+
+        if (result.hasErrors()) {
+            logger.error("[Error de validación]", result.getAllErrors());
+            List<Region> regiones = servicioRegion.listRegiones();
+            model.addAttribute("regionesData", regiones);
+            return "paises"; // Devuelve la vista con errores
+        }
+
+        try {
+            pais = servicio.grabarPais(pais.getCOUNTRY_ID(), pais.getCOUNTRY_NAME(),  pais.getRegion().getREGION_ID());  // Graba el país
+            model.addAttribute("pais", pais);  // Añade el país al modelo
+            return "pais"; // Devuelve la vista
+        } catch (Exception e) {
+            logger.error("[Error al crear el país]", e);
+            model.addAttribute("error", "Error al crear el país");
+            return "error"; // Devuelve una vista de error
+        }
+
     }
 
 
     @PostMapping("/modificar")
-    public String modificarPais(@ModelAttribute Pais pais, Model model) {
+    public String modificarPais(@Valid @ModelAttribute Pais pais, BindingResult result, Model model) {
         logger.info("[ControladorPaises] - modificarPais");
         logger.debug("[pais:"+pais.toString()+"]");
-       Pais paisAux = servicio.grabarPais(pais);
-        model.addAttribute("pais", paisAux);  // Añade el país al modelo
 
+
+        if (result.hasErrors()) {
+            logger.error("[Error de validación]", result.getAllErrors());
+            List<Region> regiones = servicioRegion.listRegiones();
+            model.addAttribute("regionesData", regiones);
+            return "paises"; // Devuelve la vista con errores
+        }
+
+        Pais paisAux = servicio.grabarPais(pais);
+        model.addAttribute("pais", paisAux);  // Añade el país al modelo
         return "pais"; // Devuelve la vista
+
     }
     @PostMapping("eliminar")
     public String eliminarPais(@RequestParam(name="id") String id, Model model) {

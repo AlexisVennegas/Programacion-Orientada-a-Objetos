@@ -26,12 +26,8 @@ public class RegionController {
 
     @GetMapping("/{id}")
     public Region getRegionById(@PathVariable Integer id) {
-
         Optional <Region> regionOptional = regionRepository.findById(id);
-
-
         Region region = regionRepository.findById(id).orElseThrow(() -> new RuntimeException("Region not found"));
-
         return region;
     }
 
@@ -42,7 +38,6 @@ public class RegionController {
 
     @PutMapping
     public Region updateRegion(Region region) {
-
         return regionRepository.save(region);
     }
     @DeleteMapping("/{id}")

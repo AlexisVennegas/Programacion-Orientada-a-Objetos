@@ -2,6 +2,8 @@ package com.example.mvc.demo.example.mvc.entities;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "COUNTRIES")  // Opcional, define el nombre de la tabla en la BD
@@ -13,6 +15,8 @@ public class Pais {
     private String COUNTRY_ID;
 
     @Column(name = "COUNTRY_NAME")
+    @NotNull
+    @NotBlank(message = "El nombre del país no puede estar vacío")
     private String COUNTRY_NAME;
 
     @ManyToOne
